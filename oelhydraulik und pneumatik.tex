@@ -1,0 +1,1287 @@
+\documentclass[landscape,a4paper,10pt]{article}
+
+\usepackage{layout}
+
+%------------------------------------
+%  FOOTER SETTINGS
+%------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{Alessandro \& Matthias}
+\fancyfoot[C]{Ölhydraulik und Pneumatik - \today}
+\fancyfoot[RO, LE] {\thepage}
+
+
+%------------------------------------
+%  GRAPHIC COMMANDS
+%------------------------------------
+\graphicspath{ {./graphics/} {./graphics/Inkscape/} {./graphics/plots/} {./graphics/photos/}}
+
+\newcommand{\svg}[2]{
+	%\begin{figure}[h]
+	\begin{minipage}{\columnwidth}
+		\centering
+		\def\svgwidth{#2}
+		%\begin{center}
+			\input{./graphics/Inkscape/#1.pdf_tex}
+		%\end{center}
+		
+		%\caption[#2]{#3}
+		%\label{#1}
+	\end{minipage}
+	%\end{figure}
+}
+
+% SMALL GRAPHICS
+\newcommand{\graphicss}[1]{		
+%\medskip
+\noindent
+\begin{minipage}{\columnwidth}
+\centering
+\includegraphics[width=3cm]{#1.png}
+\end{minipage} 
+\medskip 
+\\
+}
+
+% MEDIUM GRAPHICS
+\newcommand{\graphicsm}[1]{
+%\medskip
+\noindent
+\begin{minipage}{\columnwidth}
+\centering
+\includegraphics[width=5cm]{#1.png}
+\end{minipage} 
+\medskip 
+\\
+}
+
+% COLUMN FILLING GRAPHICS
+\newcommand{\graphiccol}[1]{
+\noindent
+\begin{minipage}{\columnwidth}
+\centering
+\includegraphics[width=\columnwidth]{#1.png}
+\end{minipage}
+\medskip \\
+}
+
+
+%------------------------------------
+%  BEGIN DOCUMENT
+%------------------------------------
+
+\begin{document}
+\sffamily
+
+%--TABLE OF CONTENTS--
+{{\huge\sffamily\bfseries Ölhydraulik und Pneumatik}}
+%\begin{multicols*}{2}
+%\tableofcontents
+%\end{multicols*}
+%\newpage
+
+%--CONTENT--
+\begin{multicols*}{3}
+
+
+
+
+
+
+\section{Grundlagen}
+\subsection{Analogien}
+\begin{tabular}{ll}
+Potentialgrösse & Druck $[bar]$ \\
+Flussgrösse & Volumenstrom $[l/min]$ \\
+Leistung & Druck $\cdot$ Volumenstrom $\frac{[bar] \cdot [l/min]}{0.6}$ \\
+Widerstand & Druck/Volumenstrom $\frac{[bar]}{[l/min]}$ \\
+Kapazität & Volumen/Druck $\frac{[m^3]}{[bar]}$ \\
+Induktivität & Druck/Volumenstromänd. $\frac{[bar]}{[(l/min)/s}$
+\end{tabular}
+\subsection{Umrechungen}
+Umrechnung von Kubikmeter zu Liter:
+\begin{align*}
+1\, m^3 = 1000 \, l
+\end{align*}
+
+\subsection{Kraft durch Druck}
+Zusammenhang zw. Kraft und Fläche:
+\begin{align*}
+F = p \cdot A \tag{Kraft = Druck*Fläche}
+\end{align*}
+
+\subsection{Volumenstrom}
+\begin{align*}
+\dot{Q} = A \cdot v	
+\end{align*}
+
+\subsection{Kontinuitätsgleichung}
+\begin{align*}
+Q &= v \cdot A \tag{Massenerhalt} \\
+v &= \frac{Q_1}{A_1} = \frac{Q_2}{A_2}
+\end{align*}
+
+\subsection{Leistung}
+Mechanische Leistung:
+\begin{align*}
+P_M = F \cdot v
+\end{align*}
+
+Hydraulische Leistung:
+\begin{align*}
+P_H = Q \cdot p
+\end{align*}
+
+
+%\subsection{Hydrostatik / Hydrodynamik}
+%Die \emph{Hydrostatik} nutzt die \emph{potentielle Energie} des Druckes in einem geschlossenen Volumen zur Leistungsübertragung. \\
+%
+%Die \emph{Hydrodynamik} nutzt die \emph{kinetische Energie} eines Fluids zur Leistungsübertragung. 
+
+
+
+
+\subsection{Pascalsches Gesetz}
+Gilt für zwei direkt verbundene Kolben mit unterschiedlichen Kolbenflächen $A_1$ und $A_2$ und unterschiedlichen Kräften $F_1$ und $F_2$. 
+\myeqstar{
+\frac{F_1}{F_2} = \frac{x_2}{x_1} = \frac{v_2}{v_1} = \frac{A_1}{A_2}
+}
+\begin{tabular}{llll}
+$\rho:$ & Druck $[bar]$ & $F:$ & Kraft $[N]$ \\
+$V:$ & Volumen $[m^3]$ & $x:$ & Weg $[m]$ \\
+$Q:$ & Volumenstrom $[l/min]$ & $v:$ & Geschw. $[m/s]$\\
+$A:$ & Fläche $[m^2]$
+\end{tabular}
+
+\vfill
+\columnbreak
+\subsection{Viskosität}
+Die Viskosität ist sozusagen der Widerstand eines Fluids und daher stark von der Temperatur abhängig.
+
+\graphicsm{viskositaet}
+
+Die viskosität ist ein Mass für die Zähigkeit und bestimmt die notwendige Kraft $F$, um eine Platte mit der Kontaktfläche $A$ im Abstand $h$ mit der Relativgeschwindigkeit $v$ über einen Flüssigkeitsfilm zu ziehen. Sie stellt somit eine Grösse für die inneren Reibungskräfte dar. 
+
+\myeqstar{
+\frac{F}{A} &= \eta \cdot \frac{dv}{dz} \tag{Newton} \\
+\eta &= \frac{F \cdot h}{A \cdot v_{(z=h)}} \tag{Dyn. Viskosität} \\
+\nu &= \frac{\eta}{\rho} \tag{Kinem. Viskosität}
+}
+\begin{tabular}{llll}
+$F:$ & Zugkraft $[N]$ & $\nu:$ & Kin. Viskosität $[m^2/s]$ \\
+$v:$ & Relativgeschw. $[m/s]$ & $\eta:$ & Dyn. Viskosität $[Pa\,s]$ \\
+$h:$ & Filmdicke $[m]$ & $\rho:$ & Dichte $[kg/m^2]$\\
+$A:$ & Kontaktfläche $[m^2]$
+\end{tabular}
+
+
+\subsection{Viskosität \& Wirkungsgrad}
+\graphiccol{visk_wirkungsgrad}
+\vfill
+
+
+\subsection{Viskosität beeinflussen}
+Den grössten Einfluss auf die Viskosität hat die Temperatur. So wird auch je nach Anweundungsbereich der Temperatur entsprechend das Arbeitsfluid gewählt. 
+\graphiccol{visk_temp}
+Man beachte die zweifach logarithmische Darstellung. Der Bezugswert der kinematischen Viskosität wird bei $40^\circ C$ ermittelt.
+
+Der Druck hat ebenfalls Auswirkungen auf die Viskosität, der allerdings bei Werten unter $100 bar$ vernachlässigt werden kann. Mit steigendem Druck nimmt auch die Viskosität zu. 
+\vfill
+
+\subsection{Dichte von Druckflüssigkeiten}
+\graphiccol{dichte}
+
+\myeqstar{
+\frac{\Delta \rho}{\rho} &= \frac{1}{E} \cdot \Delta p \tag{T=const.} \\
+\frac{\Delta \rho}{\rho} &= -\beta_T \cdot \Delta T \tag{p=const.} \\
+E &= f(p) \tag{Kompressionsmodul} \\
+\beta_T &= 6.5 -  7.5 \cdot 10^{-4} [K^{-1}] \tag{Ausdehnungs Koeff.}
+}
+
+
+\vfill
+\columnbreak
+\subsection{Elastizität der Druckflüssigkeit}
+Eine Druckflüssigkeit arbeitet ähnlich einer mechanischer Feder, mit der Ausnahme dass keine Zugkräfte übertragen werden können. Massgebend ist der Kompressionsmodul $E$. Der Kompressionsmodul wird stark durch den Anteil freier Luftbläschen im Fluid beeinflusst. 
+
+\myeqstar{
+C(x) = \frac{E \cdot A}{x} \tag{Federsteifigkeit der Druckflüssigkeit}
+}
+Vorsicht: $C$ steigt linear mit sinkender Höhe $x$ an, ist also nicht konstant!
+
+\begin{tabular}{ll}
+$E:$ & E-Modul Öl \\
+$A:$ & Fläche Ölsäule \\
+$x:$ & Höhe Ölsäule
+\end{tabular} \\
+
+
+Parallelschaltung von $N$ Federn:
+\begin{align*}
+C = \sum C_1  + C_2 + \hdots + C_N
+\end{align*}
+
+
+Serieschaltung von $N$ Federn:
+\begin{align*}
+\frac{1}{C} = \sum \frac{1}{C_1} + \frac{1}{C_2} + \hdots + \frac{1}{C_N}
+\end{align*}
+
+
+Federkraft:
+\begin{align*}
+F = C \cdot \Delta x
+\end{align*}
+
+
+
+
+\subsubsection{Normierter Druck}
+Zusammenhang zwischen Weg- und Druckänderung der Ölsäule:
+\myeqstar{
+&\frac{\Delta p}{E} = \frac{\frac{\Delta x}{x_0}}{1- \frac{\Delta x}{x_0}} = \frac{\Delta x}{x_0 - \Delta x}\\
+&\Delta x  = \left( \frac{P}{E + P} \right) x_0
+}
+
+
+\subsubsection{Kompressionsvolumen}
+Volumen, das aufgrund der Kompressibilität einer Flüssigkeit zusätzlich in einen Raum gedrückt werden muß, um dort eine bestimmte Druckänderung $\Delta p$ zu erzeugen:
+
+\myeqstar{
+\Delta V = \frac{V_0}{E} \cdot \Delta p \tag{Kompressionsvolumen} \\
+\Delta p = \frac{\Delta V}{V} \cdot E \tag{Kompressionsgleichung}
+}
+\begin{tabular}{ll}
+$V_0:$ & Volumen unter Druck \\
+$\Delta p:$ &Druckerhöhung im Raum
+\end{tabular}
+
+\subsubsection{Druckerhöhung durch mechanische Kompression}
+Kompression wird durch Wegänderung $\Delta x$ eines beweglichen Kolbens aufgeprägt.
+\myeqstar{
+\Delta V &= \Delta x \cdot A \tag{Komprimiertes Volumen} \\
+V &= x \cdot A \tag{Volumen nach Kompr.} \\
+\Delta p &= \frac{\Delta x}{x} \cdot E \tag{aus Komressionsgleichung} \\
+\Delta p &= \frac{\Delta F }{A} \tag{Druckänderung aus Kraftglgw.}
+}
+
+
+
+
+
+
+
+
+\subsection{Druckänderung in offenen Systemen}
+Druckänderungsgeschwindigkeit:
+\myeqstar{
+\dot{p} &= \frac{\Sigma Q_i}{V} \cdot E  \\
+\dot{p} &= \left( \frac{\dot{m}_1 - \dot{m}_2}{m} \pm \frac{\dot{x}}{x} \right) \cdot E 
+}
+
+
+
+\vfill
+\columnbreak
+\subsection{Strömungen}
+Für jede Geometrie ergeben sich andere Gleichungen für eine Strömung. Der Volumenstrom ist aber immer proportional zur Druckdifferenz und umgekehrt proportional zur dynamischen Viskosität. Da die Viskosität stark temperaturabhängig ist, hänt somit auch der Volumenstrom von der Temperatur ab. 
+
+\subsubsection{Reynoldszahl}
+Die Reynoldszahl gibt Auskunft darüber ob die Strömung laminar oder Turbulent ist. In Rohrströmungen sind ab einem Wert von $2315$ turbulente Strömungen möglich
+\myeqstar{
+Re &= \frac{\rho \cdot v_m \cdot d}{\eta} = \frac{v_m \cdot d}{\nu} = \frac{4}{\pi} \cdot \frac{Q}{\nu \cdot d} \\
+d &= \frac{4 \cdot A}{U}
+}
+\begin{tabular}{llll}
+$\eta:$ & Dyn. Viskosität $[Pa \, s]$ \qquad ($\eta = \nu \cdot \rho$)\\
+$\nu:$ & Kin. Viskosität $[m^2/s]$ \qquad (aus Diagram) \\
+$\rho:$ & Dichte $[kg/m^3]$  \\
+$v_m:$ & Mittlere Geschw. $[m/s]$ \\
+$d:$ & Hydr. Durchmesser $[m]$ \\
+$Q:$ & Volumenstrom $[m^3/s]$
+\end{tabular} \\
+
+
+\subsubsection{Bernoulli Gleichung}
+Bernnoulli Druckgleichung für reibungsfreie, inkompressible Medien:
+\myeqstar{
+p + \rho g z + \frac{\rho}{2} v^2 = const.
+}
+
+\begin{description}
+\item[Statischer Druck:] Ergibt sich aus Druckmessung senkrecht zur Strömungsrichtung. Die kinetische Energie des Stromes hat keinen Einfluss, da sie nur in Strömungsrichtung wirksam ist.
+\item[dynamischer Druck:] Druckmessung in Strömungsrichtung berücksichtigt auch die kinetische Energie eines Fluids. 
+\end{description}
+
+
+
+
+
+\subsubsection{Strömung im Rechteckspalt}
+\graphiccol{rechteckspalt}
+Kann benutzt werden um einen Leckage Volumenstrom zu berechnen, sofern die Voraussetzung erfüllt ist. Ein Rechteckspalt liegt vor, wenn die Höhe $h$ um mindestens eine Grössenordnung kleiner ist als die Breite $b$ und die Länge $l$ nochmals entsprechend grösser ist. \\
+
+
+Voraussetzung: $h \ll b \ll l$ \\
+
+
+\begin{align*}
+v(x) = \frac{\Delta p}{2 \cdot \eta \cdot l} \cdot ( \frac{h^2}{4} - x^2)
+\end{align*}
+
+\myeqstar{
+Q = \frac{\Delta p}{12 \cdot \eta \cdot l} \cdot b \cdot h^3 \tag{Volumenstrom}
+}
+
+
+\subsubsection{Strömung im Kreisspalt}
+\graphiccol{kreisspalt}
+Voraussetzung ist, dass die Läänge $l$ wesentlich grösser ist als der Durchmesser $2R$.
+ 
+\begin{align*}
+v(x) = \frac{\Delta p}{4 \cdot \eta \cdot l} \cdot (R^2 - x^2)
+\end{align*}
+
+\myeqstar{
+Q = \frac{\Delta p}{8 \cdot \eta \cdot l} \cdot \pi \cdot R^4 \tag{Volumenstrom}
+}
+
+
+\subsubsection{Strömung im Kreisringspalt}
+\graphiccol{kreisringspalt}
+
+Voraussetzung: $r \ll R \ll l$
+
+\begin{align*}
+v(x) = \frac{\Delta p}{2 \cdot \eta \cdot l} \cdot \frac{(R-r)^2}{4} - x^2)
+\end{align*}
+
+\myeqstar{
+Q = \frac{\Delta p}{12 \cdot \eta \cdot l} \cdot \pi \cdot (R+r) \cdot (R-r)^3
+}
+
+
+\subsubsection{Blendenströmung}
+\graphiccol{blendensroemung}
+
+
+\myeqstar{
+Q = \alpha_D \cdot A_B \cdot \sqrt{\frac{2 \Delta p}{\rho}} \tag{Bernoullische Blendengleichung}
+}
+
+Die Einflüsse unterschiedlicher Blendengeometrien und Verluste durch Verwirblungen werden durch den experimentell ermittelten Kennwert $\alpha_D$ berücksichtigt.
+
+
+\subsubsection{Druckverluste \& Reibungswiderstand}
+\begin{itemize}
+\item Druckverlust durch geometrischen Widerstand
+\begin{align*}
+\Delta p = \zeta \cdot \frac{\rho}{2} \cdot v_0^2 \tag{Druckverlust}\\
+m 0 \frac{A_B}{A_0} = \left( \frac{d}{D} \right)^2 \tag{Blenden Öffnungsverhältnis} \\
+\alpha_D = \frac{1}{m \cdot \sqrt{\zeta}} \tag{Blendenbeiwert} \\
+\zeta_D = \frac{1}{m^2 \cdot \alpha_D^2} \tag{Widerstandszahl}
+\end{align*}
+\item Druckverluste in geraden Rohrleitungen
+\begin{align*}
+\Delta p = \lambda \cdot \frac{L}{d} \cdot \frac{\rho}{2} \cdot v^2
+\end{align*}
+\begin{tabular}{ll}
+$\rho$ & Dichte \\
+$\lambda$ & Rohrreibungszahl (aus Diagram)\\
+$v$ & Mittlere Strömungsgeschw.
+\end{tabular}
+\end{itemize}
+
+
+\subsubsection{Rohrreibungszahl}
+\begin{align*}
+\lambda = x \cdot \left( \frac{1}{Re} \right)^n
+\end{align*}
+
+\begin{tabular}{lcc}
+Typ & x & n \\
+\hline 
+isotherm, laminar & 64 & 1 \\
+laminar + Wärmeverlust & 75 & 1 \\
+turbulent & 0.3164 & 0.25
+\end{tabular}
+
+
+\graphiccol{Rohrreibungszahl}
+
+
+
+\section{Pumpen und Motoren}
+\subsection{Wirkungsgrade}
+\begin{itemize}
+\item Hydraulisch-mechanisch $\eta_{hm}$: Verluste in hydraulischen An-/Abtriebsgliedern, die im wesentlichen durch Reibungskräfte, die drehzahl-, druck- oder geschwindigkeitsabhängig sein können sowie durch Strömungsverluste hervorgerufen werden. Dabei ergeben sich die Verlustmomente.
+\item Volumetrischer Wirkungsgrad $\eta_{vol}$: Der volumetrische Wirkungsgrad beschreibt das Verhältnis von effektivem (tatsächlich aufgenommenem oder abgegebenem) Volumenstrom zu theoretischen Volumenstrom aufgrund der Verdrängerkinematik und der Drehzahl.
+\end{itemize}
+
+\subsubsection{Beispiel: Zylinder}
+Zylinder mit hydraulisch-mechanischem Wirkungsgrad $\eta_{hm}$. Reibung bringt immer Verluste, daher lassen sich zwei Fälle unterscheiden:
+\begin{enumerate}
+\item Druck wird im  Zylinder zu Kraft umgewandelt. Dabei wird die effektive Kraft  mit dem Wirkungsgrad reduziert:
+\begin{align*}
+\eta_{hm} \cdot F = P \cdot A  
+\end{align*}
+\item Kraft wird in Druck umgewandelt. Dabei wird der erzielte Druck mit dem Wirkungsgrad reduziert.
+\begin{align*}
+F = \eta_{mh} \cdot P \cdot A
+\end{align*}
+\end{enumerate}
+
+\subsection{Vierquadrantenbetrieb}
+Grundsätzlich können Pumpen und Motoren (allgemein Verdrängereinheiten genannt) auch im jeweils anderen Betriebszustand arbeiten, sofern es die Bauart zulässt.
+\graphiccol{vierquadrantenbetrieb}
+Die Richtung des Lastmoments und der Umdrehung bestimmen die Art des Betriebes. Somit ergeben sich vier verschiedene Kombinationen, wovon je zwei Pumpen oder Motoren entsprechen.
+
+
+
+
+
+\subsection{Verdrängereinheit}
+Einfaches Modell eines Kreisförmigen Zylinders. Das Volumen des kreisförmigen Zylinderrohres wird Schluckvolumen genannt (in diesem Fall $\pi  d  A$). 
+\graphicsm{verdraengereinheit}
+\myeqstar{
+M  = \Delta p \cdot \frac{V}{2 \pi}
+}
+\begin{tabular}{ll}
+$p:$ & Druck \\
+$M:$ & Moment \\
+$V:$ & Volumen
+\end{tabular}
+
+
+\vfill
+\columnbreak
+\subsection{Pumpen-Gleichungen}
+Wirkungsgrade:
+\myeqstar{
+\eta_{vol} &= \frac{Q_P}{n \cdot V_P} \tag{Volumetrisch} \\
+\eta_{hm} &= \frac{p_0}{M} \cdot \frac{V_P}{2 \pi} \tag{Hydraulisch-mechanisch} \\
+\eta_{Pumpe} &= \eta_{hm} \cdot \eta_{vol} = \frac{P_H}{P_m} \tag{Gesamt}
+}
+
+Der volumetrische Wirkungsgrad beispielsweise errechnet sich aus dem Quotienten zwischen theoretischem und praktischem Fördervolumen. In der Praxis ist das Fördervolumen durch Leckage und andere Verluste geringer. $\eta_{vol}$ reduziert somit den geförderten Volumenstrom. \\
+
+Weitere Gleichungen (Äuivalent zu den Gleichungen oben):
+\begin{align*}
+M &= p_0 \cdot \frac{V_P}{2 \pi} + M_R \tag{Pumpenmoment} \\
+Q_P &= n \cdot V_P - Q_L \tag{Volumenstrom} \\
+P_H &= p_0 \cdot Q_P = \eta_{hm} \cdot \eta_{vol} \cdot P_m \tag{Leistung}
+\end{align*}
+Dabei ist der Leckage Volumentstrom $Q_L$ in $\eta_{vol}$ enthalten und das Verlustmoment $M_R$ in $\eta_{hm}$.
+
+\begin{tabular}{ll}
+$n:$ & Drehzahl \\
+$Q_p:$ & Volumenstrom gefördert\\
+$V:$ & Fördervolumen \\
+$p_0:$ & Druck am Pumpenausgang \\
+$M:$ & Antriebsmoment
+\end{tabular}
+
+\subsection{Motoren-Gleichungen}
+\myeqstar{
+\eta_{vol} &= \frac{n \cdot V_M}{Q_M} \tag{Volumetrisch} \\
+\eta_{hm} &= \frac{M}{p_0} \cdot \frac{2 \pi}{V_M} \tag{Hydraulisch-Mechanisch}
+}
+Der Volumetrische Wirkungsgrad $\eta_{vol}$ reduziert das effektive Schluckvolumen. Der hydraulisch-mechanische Wirkungsgrad $\eta_{hm}$ reduziert die Motorleistung. 
+
+
+Weitere Gleichungen:
+\begin{align*}
+M &= p_0 \cdot \frac{V_M}{2 \pi} - M_R \tag{Lastmoment} \\
+Q_M &= n \cdot V_M + Q_L \tag{Volumenstrom} \\
+P_H &= p_0 \cdot Q_M = \frac{P_m}{\eta_{hm} \cdot \eta_{vol}}
+\end{align*}
+
+\begin{tabular}{ll}
+$n:$ & Drehzahl \\
+$Q_m:$ & Schluckvolumenstrom des Motors\\
+$p_0:$ & Druck am Motoreneingang \\
+$V_M:$ & Schluckvolumen \\
+$P_H:$ & Leistung der Ölversorgung \\
+\end{tabular}
+
+
+
+\subsection{Konstantpumpen}
+\graphiccol{konstantpumpen}
+
+\subsubsection{Aussenzahnradpumpen}
+\graphiccol{aussenzahnradpumpe}
+\begin{align*}
+V &= 2 \cdot b_z \cdot \pi \cdot d_z \cdot h_z \\
+m &= \frac{d_z}{z} = h_z
+\end{align*}
+
+\myeqstar{
+V = 2 \cdot b_z \cdot \pi \cdot z \cdot m^2
+}
+
+\begin{tabular}{ll}
+$b_z:$ & Zahnbreite $[mm]$\\
+$d_z:$& Teilkreisdurchmesser $[mm]$\\
+$h_z:$& Zahnhöhe $[mm]$\\
+$m:$& Modul $[mm]$\\
+$z:$& Anzahl Zähne $[-]$
+\end{tabular} \\
+
+
+Hohe Drehzahl, mittleres Fördervolumen. Eignet sich gut für mittleren Druckbereich. Grösste Pulsationen, Geräuschintensiv. Zahnradpumpen sind die am meisten verbreitete Form auf dem Markt. Die Herstellung ist günstig da vergleichsweise wenige und relativ einfache Teile benötigt werden. Das Öl wird nicht verdichtet da der Druckraum seine Grösse nicht ändert. Die Verdichtung erfolgt erst bei Verbindung zur Hochdruckseite, was Pulsation mit sich bringt. Die meisten Zahnräume sind miteinander durch Ringnuten verbunden, so dass das Druckfeld kontinuerlich anstatt schlagartig aufgebaut wird. 
+
+
+\subsubsection{Innenzahnradpumpe}
+\graphiccol{innenzahnradpumpe}
+
+\begin{align*}
+V &= b_z \cdot \pi \cdot d_z \cdot h_z \\
+m &= \frac{d_z}{z} = h_z
+\end{align*}
+\myeqstar{
+V = b_z \cdot \pi \cdot z \cdot m^2
+}
+
+\begin{tabular}{ll}
+$b_z:$ & Zahnbreite $[mm]$\\
+$d_z:$& Teilkreisdurchmesser Antriebsritzel $[mm]$\\
+$h_z:$& Zahnhöhe $[mm]$\\
+$m:$& Modul $[mm]$\\
+$z:$& Anzahl Zähne $[-]$
+\end{tabular} \\
+
+Bei der Innenzahnradpumpe ändert sich das Volumen des Verdrängungsraum. Das treibende Zahnrad läuft exzentrisch, ein Füllstück sorgt für die Abdichtung zwischen Saug- und Druckseite. Gut geeignet für hohe Drehzahlen. Es existieren auch zweistufige Bauarten, welche durch das Aufteilen des Prozesses die Lagerbelastung reduzieren. 
+
+
+\subsubsection{Kolbempumpen}
+Hochdrukbereich. Axialkolbeneinheiten sind aber stark von der Viskosität und somit auch von der Temperatur abhängig. 
+
+
+
+\subsubsection{Schraubenspindelpumpe}
+\graphiccol{schraubenspindelpumpe}
+
+Sehr geringer Betriebsdruck, kann aber grosse Volumenströme beinahe pulsationsfrei fördern (Aufzughydraulik zbsp). 
+Druckbereich stark beschränkt, so dass nur niedrige und mittlere Drücke möglich sind. Bedingt durch die mechanische Funktionsweise ist der Wirkungsgrad der geringste von allen Pumpenarten. Dafür entstehen keine Turbulenzen und keine Kompressionen des Mediums, was in einer verschindend geringen Pulsation resultiert. 
+
+
+
+\subsection{Verstellpumpen}
+\graphiccol{verstellpumpen}
+
+\subsubsection{Axialkolben}
+Mehrere kleine Zylinder sind kinematisch gekoppelt. Bei Axialkolbenverdränger mit Schrägscheibe kann das Verdrängervolumen (Pumpe) resp. Schluckvolumen (Motor) präzise über einen Neigewinkel eingestellt werden.
+
+\subsubsection{Schrägscheibenverstellpumpe}
+\graphiccol{schraegscheibenverstellpumpe}
+Durch Veränderung des Neigungswinkels der Schrägscheibe ergibt sich ein unterschiedlicher Kolbenhub. Bei dieser Bauform werden allerdings Querkräfte auf die Kolben erzeugt, welche als Moment auf der Welle spürbar sind. Die Kolbentrommel ist fest mit der Antriebswelle verbunden. Durch Drehung der Welle werden somit die Kolben ebenfalls in Rotation versetzt. Eine Kolbenrückhalteplatte hindert die einzelnen Zylinder am Abheben von der Schrägscheibe im Falle eines Unterdrucks. 
+
+\myeqstar{
+V = \frac{pi}{2} \cdot n_z \cdot d_z^2 \cdot r_{KT} \cdot \tan \alpha \tag{Schluckvolumen}
+}
+\begin{tabular}{ll}
+$n_z:$ & Anzahl Kolben $[-]$ \\
+$A_z:$ & Kolbenfläche $[mm]$ \\
+$d_z:$ & Kolbendurchmesser $[mm]$ \\
+$\alpha: $ & Winkel zwischen Scheibe und Kolben
+\end{tabular}
+
+
+\subsubsection{Schrägachsenverstellpumpe}
+\graphiccol{schraegachsenverstellpumpe}
+Wie bei der Schrögscheibenpumpe wird die Trommel direkt von der Welle angetrieben. Im Unterschied dazu laufen hier die Kolben abgewinkelt zur Antriebswelle und werden ebenfalls von dieser Angetrieben, sodass keine Querkräfte auf die Kolben wirken. Dadurch sind höhere Drehzahlen möglich wodurch diese Bauart gut für Motoren geeignet ist. 
+
+
+\subsubsection{Radialkolben Bauart}
+\graphiccol{radialpumpe}
+Bei dieser Bauform stehen die Zylinder radial zur Drehachse, also Senkrecht zur Antriebswelle. Die Hubbewegung wird entweder durch Exzentrizität oder durch auf der Welle befindliche Exzenter bewirkt. Die Verstellung der Radialkolbenpumpe erfolt über eine exzentrische Verschiebung $e$ des Hubringes. 
+
+\myeqstar{
+V = \frac{\pi}{2} \cdot d_k^2 \cdot e \cdot z \tag{Fördervolumen}
+} 
+\begin{tabular}{ll}
+$d_k:$ & Kolbendurchmesser $[-]$ \\
+$e:$ & Exzentrizität $[mm]$ \\
+$z:$ & Kolbenanzahl $[-]$ 
+\end{tabular}
+
+
+
+\subsubsection{Flügelzellenpumpen}
+\graphiccol{fluegelzellenpumpe}
+Sind bei allen Kennwerten eher im Mittelfeld anzufinden.
+Charakteristisch sind geringe Förderstrom- und Druckpulsation und dadurch auch ein geringes Betriebsgeräusch. Bei dieser Art Pumpe wir die Hydraulikflüssigkeit von Zellen, gebildet von je zwei Flügeln und der Gehäusewand, verdrängt. Die Flügel sind druckausgeglichen, sodass bereits eine geringe rotatorische Bewegung sie nach aussen presst. Teilweise befinden sich zusätzlich Federn im Innern welche dies unterstützen. Das Förervolumen wird über die Exzentrizität gestäuert. Wird die Exzentrizität über eine Feder bewirkt, so hat man gleichzeitig eine Druckbegrenzung, da beim Überschreiten eines gewissen Druckes die Feder nachgibt und die Exzentrizität reduziert. 
+
+\myeqstar{
+V = 2 \cdot e \cdot b \cdot (\pi \cdot d_G - z \cdot s) \tag{Fördervolumen}
+}
+\begin{tabular}{ll}
+$d_G:$ & Durchmesser Gehäusebohrung $[mm]$\\
+$e:$ & Extentrizizät $[mm]$\\
+$z:$ & Anzahl der Flügel $[-]$\\
+$s:$ & Dicke der Flügel $[mm]$\\
+$b:$ & Flügelbreite $[mm]$
+\end{tabular}
+
+
+\subsubsection{Gerotor}
+\graphiccol{gerotor}
+Gerotor-Motoren sind robust, laufen langsam und bieten ein hohes Drehmoment. 
+
+
+\subsection{Pulsation}
+\graphiccol{pulsation}
+Jede Verdrängerbauart besteht aus einer finiten Anzahl Förderelemente, welche zu Ungleichmässigkeiten im Volumenstrom führen. Eine einfache Anschauung zeigt, dass bei ungerader Zähnezahl die Pulsationen erheblich geringer sind. Dazu betrachtet man die Volumenstromkurve eines Förderlemenets, welche durch einen Sinus dargestellt werden kann. Im resultierenden Zeigerdiagram sieht man, dass eine ungerade Anzahl zu geringeren Unterschieden führt. 
+
+
+\vfill
+\columnbreak
+\section{Hydraulikzylinder}
+Zylinder wandeln hydraulische Leistung mittels linearen Bewegungen in Kraft um.  
+
+
+\subsection{Grundbauarten}
+\subsubsection*{Gleichganzylinder}
+\graphicsm{zyl_gleichgang}
+Dank der durchgehenden Kolbenstange steht für beide Richtungen die gleiche Fläche zur Verfügung. Die Dynamik wird dadurch stark erhöht.
+
+
+\subsubsection*{Differentialzylinder}
+\graphicsm{zyl_differential}
+Zylinder mit nur einer einseitigen Kolbenstange. Geeignet wenn nur in eine Richtung Arbeit verrichtet werden soll. Querkräfte werden jedoch schlechter aufgenommen.
+
+Einziger Zylindertyp mit unterschiedlicher Verfahrgeschwindigkeit.
+
+
+\subsubsection*{Plunger Zylinder}
+\graphicsm{zyl_plunger}
+Verfügen über nur einen Druckanschluss und brauchen daher einen weiteren Mechanismus um den Zylinder wieder einzufahren (externe Last oder Feder). 
+
+
+
+\subsection{Grundgleichungen}
+\graphiccol{zylinderkraefte}
+\begin{align*}
+&F_B = F_P - F_R - F_L = m \cdot a \\
+&F_P - F_R = (p_A \cdot A_K - p_B \cdot A_R) \cdot \eta_{hm} \\
+&v = \frac{Q_K}{A_K} = \frac{Q_R}{A_R} \tag{stationäre Geschw.}
+\end{align*}
+\begin{tabular}{ll}
+$\eta_{hm}:$ & Hydraulisch-mechanischer Wirkungsgrad
+\end{tabular} \\
+
+\vfill
+\columnbreak
+
+\subsection{Knicksicherheit}
+\subsubsection*{Eulerfaktor}
+\graphiccol{eulerfall}
+
+\subsubsection*{Korrekturfaktor}
+\graphiccol{korrekturfaktor}
+
+\subsubsection*{Schlankheitsgrad}
+\myeqstar{
+\lambda = 4 \cdot K \cdot \frac{h}{d_S}
+}
+\begin{tabular}{ll}
+$K:$ & Korrekturfaktor \\
+$h:$ & Hub \\
+$d_S:$ & Durchmesser Stange
+\end{tabular}
+
+
+\subsubsection*{Grenzwert Knicksicherheit}
+\myeqstar{
+&\lambda_G = \pi \cdot \sqrt{\frac{E}{R_p}} \tag{Grenzwert} \\
+\Rightarrow & \left( \frac{h}{d_S}\right)_G = \frac{\pi}{4 K} \cdot \sqrt{ \frac{E}{R_p}}
+}
+
+\begin{itemize}
+\item Fall $\frac{h}{d_S} >= \left( \frac{h}{d_S}\right)_G; \quad \lambda \geq \lambda_G$:
+Elastischer Biegefall nach Euler
+\begin{align*}
+\sigma_K = \frac{\pi^2 \cdot E}{\lambda^2}
+\end{align*}
+%
+\item Fall $\frac{h}{d_S} < \left( \frac{h}{d_S}\right)_G; \quad \lambda \leq \lambda_G$: 
+Plastischer Biegefall nach Tetmajer
+\begin{align*}
+\sigma_K = a-b \cdot \lambda
+\end{align*}
+\end{itemize}
+
+Werte für $a$ und $b$: \\
+
+\begin{tabular}{lcc}
+Material & $a$ & $b$ \\
+\hline \\
+Baustahl E 335 & $335$ & $0.62$ \\
+Vergütungsstahl 16NiCr4 & $470$ & $2.30$
+\end{tabular}
+
+
+\subsubsection*{Auslegung im Eulerfall für Differenzial-Zylinder}
+\begin{align*}
+F_{max} &= \frac{\pi^3}{64} \cdot \frac{d_S^4 \cdot E}{K^2 \cdot h^2} \\
+h_{max} &= \frac{\pi \cdot d_S^2}{8 \cdot K} \cdot \sqrt{\frac{\pi \cdot E}{F_{max}} } \\
+d_{S_{min}} &= \frac{4 d_K}{\pi d_S} \cdot K \cdot h \cdot \sqrt{\frac{\eta_{hm} \cdot p_{max}}{E} } \\
+h_{max} &= \frac{\pi \cdot d_s^2}{4 K d_K} \cdot \sqrt{\frac{E}{\eta_{hm} \cdot p_{max}} }
+\end{align*}
+
+
+\newpage
+\section{Proportionalventile}
+\subsection{Wegeschaltventil}
+
+\graphiccol{wegeschaltventil1}
+\graphiccol{wegeschaltventil2}
+\begin{itemize}
+\item Druck verursacht keine Kräfte in Bewegungsrichtung des Schiebers.
+\item Betätigungskraft $F$ öffnet den Steuerschieber.
+\item Volumenstrom $Q$ entsteht durch Druckdifferenz $P_A - P_B$.
+\item Lechanschluss $P_L$ ist drucklos. 
+\end{itemize}
+
+
+
+\subsection{Proportionalwegeventil}
+\graphiccol{proportionalwegeventil}
+\begin{itemize}
+\item Federn zentrieren den Steuerschieber.
+\item Leckage an Ringspalt und Steuerkante.
+\item Schieberposition $s$ \emph{stufenlos} und \emph{proportional} zur Betätigungskraft $F$.
+\item Volumenstrom $Q$ proportional zum Ansteuerungssignal zur Betätigungskraft $F$. 
+\end{itemize}
+
+
+
+\subsection{4/3 Proportionalwegeventil}
+\graphiccol{proportionalwegeventil2}
+\begin{itemize}
+\item Eine Steuerkante je Arbeitsanschluss $A$ und $B$. 
+\item Je nach Richtung der Steuerung fliesst Volumenstrom von $A$ nach $B$ oder umgekehrt. 
+\end{itemize}
+
+
+\vfill
+\newpage
+
+\section{Hydraulische Widerstandssteuerung}
+\graphicsm{signalumsetzung}
+\myeqstar{
+y_L = y_Q + y_p = \frac{Q_L}{C_0} + \frac{p_L}{E_0} = \frac{\Delta V \cdot A}{C_0} + \frac{\Delta F}{A \cdot E_0}
+}
+
+\begin{tabular}{ll}
+$y_L:$ & Ventilöffnung \\
+$\Delta v:$ & Geschwindigkeitsänderung \\
+$A:$ & Wirkfläche \\
+$E_0:$ & Druckverstärkung \\
+$C_0:$ & Volumenstromverstärkung \\
+$\Delta F:$ & Kraftänderung
+\end{tabular} \\
+
+Erhöhung von $C_0, E_0$ bewirkt:
+\begin{itemize}
+\item Kleinere Steuersignale nötig 
+\item Höhere Laststeifigkeit 
+\item Bessere Dynamik des Ventils
+\end{itemize}
+
+
+\subsection{Ventile - Grundlagen}
+\myeqstar{
+Y = \alpha_D \cdot \pi \cdot d \cdot \sqrt{\frac{2}{\rho}} \tag{Ventilkonstante}
+}
+\begin{tabular}{ll}
+$Y:$ & Regelblende \\
+$s:$ & Stellweg \\
+$\alpha_D:$ & Blendenbeiwert
+\end{tabular} \\
+
+
+Ventilhub: 
+\begin{itemize}
+\item Negative Überdeckung (ständige Leckage):
+\begin{align*}
+y_N = s_N + s_0 
+\end{align*}
+\item Nullschnitt:
+\begin{align*}
+y_N = s_N
+\end{align*}
+\item Posiive Überdeckung (Längerer Stellweg)
+\begin{align*}
+y_N = s_N - s_0
+\end{align*}
+\end{itemize}
+
+
+\subsection{Einkantensteuerung}
+\graphiccol{einkantensteuerung}
+
+\myeqstar{
+Q_A = Y \cdot (s_0 + s) \cdot \sqrt{p_0 - p_A} - Y_T \cdot \sqrt{p_A} \tag{Lastvolumenstrom} 
+}
+
+\begin{tabular}{ll}
+$Q_A:$ & Volumenstrom Verbraucher \\
+$Y, Y_T:$ & Blendenkonstanten \\
+$s:$ & Stellweg \\
+$y_L:$  & Ventilöffnung $y_L = s + s_0$
+\end{tabular} \\
+
+
+
+
+%\myeqstar{
+%\frac{p_A}{p_0} &= \frac{\left(1+\frac{s}{s_0} \right)^2}{\left( \frac{Y_T}{Y \cdot s_0} \right)^2 + \left(1 + \frac{s}{s_0} \right) ^2} = \frac{\left(1+\frac{s}{s_0} \right)^2}{ K^2 + \left(1 + \frac{s}{s_0} \right) ^2} \\
+%Y_T &= \alpha_D \cdot A_B \cdot \sqrt{\frac{2}{\rho}} \tag{Festblende} \\
+%Y &= \alpha_D \cdot \pi \cdot d \cdot \sqrt{\frac{2}{\rho}} \tag{Regelblende}
+%}
+%\begin{tabular}{ll}
+%$Y:$ & Ventilkonstante \\
+%$s:$ & Stellweg \\
+%$\alpha_D:$ & Blendenbeiwert
+%\end{tabular} \\
+
+\myeqstar{
+K = \frac{A_B}{\pi \cdot d \cdot s_0} \tag{Ventilkonstante}
+}
+\begin{tabular}{ll}
+$A_B:$ & Fläche Verbraucheranschluss (Anschluss $A$)  \\
+$d:$ & Durchmesser von Ventil Zylinder
+\end{tabular} \\
+
+Die Ventilkonstante ist das Flächenverhältnis der Blenden bei $s=0$, also in Mittelstellung. 
+
+\myeqstar{
+E_0(K=1) = \frac{1}{2}
+ \cdot \frac{p_0}{s_0} \tag{Druckverstärkung}
+}
+
+\myeqstar{
+C_0 = \frac{\Delta Q_A}{\Delta s} = \sqrt{\frac{1}{2}} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung}
+}
+
+\myeqstar{
+y_L = \sqrt{2} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} + 2 \frac{F \cdot s_0}{A \cdot p_0}
+}
+
+
+\subsection{Zweikantensteuerung}
+\graphiccol{zweikantensteuerung}
+
+\myeqstar{
+Q_A &= Y \cdot (s_0 + s) \cdot \sqrt{p_0 - p_A} - Y \cdot (s_0 - s) \cdot \sqrt{p_A} \tag{Lastvolumenstrom} \\
+\frac{p_A}{p_0} &= \frac{1}{2} \cdot \frac{\left(1+\frac{s}{s_0} \right)^2}{1+\left( \frac{s}{s_0} \right)^2} \\
+\\
+E_0 &= \frac{p_0}{s_0} \tag{Druckverstärkung} \\
+\\
+C_0 &= \frac{\Delta Q_A}{\Delta s} = \sqrt{2} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung} \\
+y_L &= \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} +  \frac{F \cdot s_0}{A \cdot p_0}
+}
+
+%\begin{tabular}{ll}
+%$Y:$ & Blendenkonstante 
+%\end{tabular} \\
+
+%\myeqstar{
+%\frac{p_A}{p_0} = \frac{1}{2} \cdot \frac{\left(1+\frac{s}{s_0} \right)^2}{1+\left( \frac{s}{s_0} \right)^2}
+%}
+%
+%\myeqstar{
+%E_0 &= \frac{p_0}{s_0} \tag{Druckverstärkung} \\
+%C_0 &= \frac{\Delta Q_A}{\Delta s} = \sqrt{2} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung}
+%}
+%
+%\myeqstar{
+%y_L = \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} +  \frac{F \cdot s_0}{A \cdot p_0}
+%}
+
+
+\subsection{Vierkantensteuerung}
+\graphiccol{vierkantensteuerung}
+\myeqstar{
+\frac{p_L}{p_0} &= \frac{2 \frac{s}{s_0}}{1+\left( \frac{s}{s_0} \right)^2 } \\
+E_0 &= 2 \cdot \frac{p_0}{s_0}  \\
+c_0 &= \sqrt{2} \cdot Y \cdot \sqrt{p_0}  \\
+y_L &= \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} + \frac{1}{2} \frac{F \cdot s_0}{A \cdot p_0}
+}
+
+
+
+
+\section{Servozylinder Antrieb}
+\myeqstar{
+Q_L &= Q_0 \cdot \frac{y}{y_{max}} \cdot \sqrt{1-\frac{p_L}{p_0}} \tag{Lastvolumenstrom} \\
+Q_0 &= Q_N \cdot \sqrt{ \frac{p_0}{p_N} } \tag{Maximaler Ventilvolumenstrom}
+}
+
+
+
+\subsection{Kennlinienfeld}
+\graphiccol{kennlinienfeld}
+\begin{itemize}
+\item Arbeitspunkt
+\begin{align*}
+\frac{p_L}{p_0}, \quad \frac{y}{y_{max}}
+\end{align*}
+\item Druckflussverstärkung:
+\begin{align*}
+V_{QY} = 
+\frac{\partial Q_L}{\partial y} = \frac{Q_0}{y_{max}} \sqrt{1-\frac{p_L}{p_0}}
+\end{align*}
+\item Hydraulischer Leitwert:
+\begin{align*}
+V_{Qp} = \frac{\partial Q_L}{\partial p_L} = \frac{1}{2} \frac{Q_0}{p_0} \frac{\frac{y}{y_{max}}}{\sqrt{1-\frac{p_l}{p_0}}}
+\end{align*}
+\item Druckversärkung:
+\begin{align*}
+V_{py} = \frac{\partial p_L}{\partial y} = 2 \frac{p_0}{y} \cdot \left(1-\frac{p_L}{p_0} \right)
+\end{align*}
+\end{itemize}
+
+
+
+\subsection{Dynamische Kennwerte}
+Die Dynamischen Kennwerte beziehen sich auf die linearisierte Steuerkette.
+
+\graphiccol{differentialgleichungssystem}
+
+\graphiccol{steuerkette}
+\begin{itemize}
+\item Steuerverstärkung:
+\begin{align*}
+K = \frac{V_{QY}}{A}
+\end{align*}
+\item Dämpfungsgrad:
+\begin{align*}
+D &= \frac{1}{2 A} \left[ (V_{QP} + K_L ) \cdot \sqrt{\frac{2 m E}{V_0}} + R \cdot \sqrt{\frac{V_0}{2 m E}} \right] \\
+\\
+&\text{mit}\quad V_0 = 0.5 \,  h \, A: \\
+D &= \frac{1}{2 A} \cdot \left[ (V_{Qp} + K_L) \cdot \sqrt{\frac{4  m \cdot E}{h \cdot A}} + R \sqrt{ \frac{h \cdot A}{4  m \cdot E}} \right]
+\end{align*}
+\begin{tabular}{ll}
+$K_L:$ & Leckage Faktor \\
+$R:$ & Reibungs-Faktor
+\end{tabular} \\
+
+\item Eigenfrequenz:
+\begin{align*}
+\omega_0 &= A \sqrt{\frac{2 E}{m V_0}} \\
+\\
+\text{mit} & \quad V_0 = 0.5 \, h \, A: \\
+\omega_0 &= \sqrt{ \frac{4 \cdot E \cdot A}{m \cdot h} } 
+\end{align*}
+\item Maximale Kreisverstärkung mit einfachem P-Regler:
+\begin{align*}
+V_K = 2 \cdot D \cdot \omega_0 
+\end{align*}
+\end{itemize}
+
+
+\subsubsection{Mit Zustandsregler}
+Die veränderte Dynamik mit Zustandsregler ist
+\begin{align*}
+\bar{\omega}_0 &= \omega_0 \cdot \sqrt{1 + K \cdot K_v} \\
+\\
+\bar{D} &= \frac{D + 0.5\cdot K \cdot \omega_0 \cdot K_A}{\sqrt{1+K\cdot K_V}}
+\end{align*}
+
+\begin{tabular}{ll}
+$K_V:$ & Geschwindigkeitsfaktor \\
+$K_A:$ & Beschleunigungsfaktor
+\end{tabular}\\
+
+Für Überschwingungsfreises Positionieren:
+\begin{align*}
+K_P = 0.27 \cdot \bar{\omega}_0 \qquad \bar{D}_{opt} = 0.613
+\end{align*}
+
+
+
+\section{Speicher}
+Anwendungen:\begin{itemize}
+\item Schnellen Ausgleich von Volumenstrom 
+\item Schwingsungsreduktion
+\item Enthaltene Energie steht auch bei Stromausfall zur Verfügung
+\item Regeneration von Bremsenergie
+\end{itemize}
+
+Verschiedene Arten von Speicher:
+\begin{itemize}
+\item Blasenspeicher:
+\begin{itemize}
+\item Gummiblase im Speicher enthält das Kompressionsgas.
+\item  Sollte immer aufrecht stehen (gleichmässige Belastung der Blase).
+\item Hohe Dynamik
+\end{itemize}
+\item Kolbenspeicher
+\begin{itemize}
+\item Trennkolben aus festem Material (Metall), besser geeignet für grössere Volumina ($>50 l$). 
+\end{itemize}
+\item Membranspeicher
+\begin{itemize}
+\item Dünne Membran trennt Medien.
+\item Nur für sehr kleine Volumina geeignet ($<10 l$). 
+\item Ausrichtung im Gegensatz zu Blasenspeicher egal. 
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Auslegung von Speichern}
+\subsubsection{Volumenbedarf}
+$0 \rightarrow 1$: Isotherm \\
+ $1 \rightarrow 2$: Polytrop
+\begin{align*}
+V_0 = \frac{\Delta V}{\frac{p_0}{p_1} \cdot \left[ 1 - \left( \frac{p_1}{p_2} \right) ^{\frac{1}{n}} \right]}
+\end{align*}
+
+$0 \rightarrow 1$: Polytrop \\
+ $1 \rightarrow 2$: Polytrop
+\begin{align*}
+V_0 = \frac{\Delta V}{\left( \frac{p_0}{p_1} \right)^{\frac{1}{n}} - \left( \frac{p_0}{p_2} \right)^{\frac{1}{n}}}
+\end{align*}
+
+\begin{tabular}{ll}
+$n:$ & Polytropenexponent
+\end{tabular} \\
+
+
+
+\subsubsection{Pulsationsdämpfung}
+\begin{align*}
+\delta &= \frac{p_{Amplitude}}{p_{Mittelwert}} = \frac{p_2 - p_1}{p_2 + p_1} \\
+V_0 &= \frac{p_1}{p_0} \cdot \frac{\Delta V}{1 - \left( \frac{1-\delta}{1+\delta}\right)^{\frac{1}{n}}}
+\end{align*}
+
+
+\subsection{Speicherdynamik}
+\begin{align*}
+\omega_s &= \sqrt{\frac{1}{C_H \cdot L_H}} \tag{Eigenfrequenz} \\
+C_H &= \frac{V_m}{\kappa \cdot p_m} \tag{Speicherkapazität} \\
+L_S &= \frac{m_k}{A_k^2} \tag{Speicherinduktivität} \\
+L_A &= \frac{\rho \cdot l_S}{A_S} \tag{Anschlussinduktivität} \\
+L_H &= L_S + L_A
+\end{align*}
+
+\begin{tabular}{ll}
+$p_m:$ & Mittlerer Druck \\
+$V_m:$ & Mittleres Volumen \\
+$\kappa:$ & Isentropenexponent \\
+$\rho:$ & Dichte des Öls \\
+$A_K:$ & Querschnittfläche Trennelement \\
+$m_k:$ & Masse Trennelement \\
+$A_S:$ & Querschnittfläche Anschluss \\
+$l_S:$ & Länge des Anschlusses
+\end{tabular}
+
+
+
+
+
+
+
+\vfill
+\columnbreak
+\section{Pneumatik}
+\subsection{Grundlagen}
+\subsubsection{Ideales Gasgesetz}
+\begin{align*}
+p\cdot V  &= n \cdot R \cdot T \\
+p \cdot V &= m \cdot R_s \cdot T
+\end{align*}
+\begin{tabular}{ll}
+$p:$ & Druck \\
+$V:$ & Volumen \\
+$n:$ & Stoffmenge \\
+$R:$ & Universelle Gaskonstante $[\frac{J}{mol \, K}]$ \\
+$R_s:$ & Spezifische Gaskonstante (Luft: $R_s = 286.95 [\frac{J}{kg \, K}]$) \\
+$T:$ & Temperatur
+\end{tabular} \\
+
+\begin{itemize}
+\item Isothermer Prozess
+\begin{align*}
+p \cdot V = const.
+\end{align*}
+\item Isobarer Prozess
+\begin{align*}
+\frac{T}{V} = const. 
+\end{align*}
+\item Isochorer Prozess
+\begin{align*}
+\frac{T}{p} = const.
+\end{align*}
+\item Isentroper Prozess ($S=const.$)
+\begin{align*}
+&p\cdot V^\kappa = const.
+&n=  \kappa = \frac{c_p}{c_v}
+\end{align*}
+\end{itemize}
+
+\subsubsection{Spezifische Gaskonstante}
+\begin{align*}
+R = \frac{R_M}{M}
+\end{align*}
+\begin{tabular}{ll}
+$R_M = 8.31:$ & Molare Gaskonstante $[\frac{J}{mol K}]$ \\
+$M:$ & Molare Masse $[kg/mol]$
+\end{tabular} \\
+
+
+\subsubsection{Zustandsänderung idealer Gase}
+\begin{align*}
+\frac{p \cdot V}{T} &= const. \\
+p \cdot V^n &= const.
+\end{align*}
+\begin{tabular}{ll}
+$n:$ & Polytropenexponent
+\end{tabular}
+
+
+\subsection{Feuchte Luft}
+\myeqstar{
+p = p_L + p_W \tag{Gesamtluftdruck}
+}
+\begin{align*}
+&p_w \cdot V = m_w \cdot R_w \cdot T  \\
+&p_L \cdot V = m_L \cdot R_L \cdot T  \\
+\end{align*}
+\myeqstar{
+x = \frac{m_w}{m_L} = \frac{R_L}{R_w} \cdot \frac{p_w}{p-p_w} \tag{Wassergehalt}
+}
+
+\begin{tabular}{ll}
+$R_L:$ & 286.95 [J/KgK] \\
+$R_W:$ & 461.50 [J/KgK] 
+\end{tabular}
+
+
+\subsubsection{Relative Luftfeuchtigkeit}
+\graphiccol{taupunktkurve}
+Unterhalb der Kurve bildet sich kein Kondensat, die relative Luftfeuchtigkeit ist $ \varphi < 100 \%$. 
+Auf der Taupunktkurve ist  $\phi = 100 \%$. Kondensat bildet sich im Bereich oberhalb der Kurve. 
+
+\myeqstar{
+\varphi = \frac{m_{WR}}{m_{WRS}} \tag{Relative Luftfeuchtigkeit}
+}
+\begin{align*}
+m_{WRS} = \frac{m_{WS}}{V} = \frac{p_{WS}}{R_W \cdot T}
+\end{align*}
+
+\begin{tabular}{ll}
+$p_{wS}:$ & max. Partialdruck $[N/m^2]$ \\
+$m_{WRS}:$ & Sättigung Relative Wassermenge $[kg]$ \\
+$m_{WR}:$ & Relative Wassermenge $[kg/m^3]$
+\end{tabular}
+
+\subsection{Bauelemente der Pneumatik}
+\subsubsection{Pneumatischermuskell}
+\graphiccol{Pneumatischermuskel}
+\begin{itemize}
+\item kein Stick-Slip bis zum Stillstand
+\item keine Dichtungen
+\item geringer Energieverbrauch
+\item Höchstens 1/3 des Querschnitts
+\item Erheblich geringeres Gewicht
+\item Billiger und einfacher in der Handhabung
+\item positionieren in jeder Zwischenstellung
+\end{itemize}
+
+\graphiccol{Pneumatischermuskel_Kennlinienfeld}
+\begin{itemize}
+\item Materialdehnung (0 bar Kurve)
+\item relative Verformung bezogen auf Baulänge [\%]
+\item weitgehend lineare Kennlinie durch geringe Volumenänderung
+\end{itemize}
+
+\subsubsection{Vakumduese mit Saugnapfl}
+\graphiccol{Vakumduese_mit_Saugnapf}
+\begin{itemize}
+\item Vakuumdüse arbeitet mit Venturiprinzip
+\item Unterdruck am Saugnapf
+\item Tank wird gefüllt
+\item Tank entleert sich über Saugnapf bei Druckabschaltung
+\item Luftimpuls stösst das gehaltene Werkstück ab
+\end{itemize}
+
+\section{Schaltsymbole}
+\subsection{Schaltsymbole der Hydraulik}
+\subsubsection{Grundelementel}
+\graphiccol{Schaltsymbole_Hydraulik_1_Grundelemente}
+\subsubsection{Pumpen und Motoren}
+\graphiccol{Schaltsymbole_Hydraulik_2_Pumpen_und_Motoren}
+\subsubsection{Zylinder und Speicher}
+\graphiccol{Schaltsymbole_Hydraulik_3}
+\subsubsection{Sperr- und Stromventile}
+\graphiccol{Schaltsymbole_Hydraulik_5_Sperr_und_Stromventile}
+\subsubsection{Druckventile}
+\graphiccol{Schaltsymbole_Hydraulik_4_Druckventile}
+\begin{itemize}
+\item Druckbegrenzungsventil (DBV): Klassiker
+\item Druckfolgeventil (DFV):  kein Tank 
+\item Druckminderventil (DMV):  Steuerung auf Ausgansseite
+\item Vorgesteuertes Zwei-Wege-Druckreduzierventil mit externer Leckölabfuhr:  Hohe Steuerkräfte
+\item Drei-Wege-Druckreduzierventil : mit Leitung zum Tank
+\item Abschaltventil: separates Steuersignal 
+\item Elektrisch proportional angesteuertes DBV: Effizienzsteigerung da elektronisch geöffnet wird wenn kein  Volumenstrom benötigt wird. $\to$ Motor muss keinen Druck mehr erzeugen.
+\end{itemize}
+\subsubsection{Wegeventile}
+\graphiccol{Schaltsymbole_Hydraulik_6_Wegeventile}
+Die Bezeichnung des Ventiltypes folgt der Reihe nach diesen Regeln:
+\begin{itemize}
+\item  Angabe „vorgesteuert“ wenn Betätigung fluidisch unterstützt
+\item Anzahl der Anschlüsse
+\item Anzahl der Schaltstellungen
+\item optional nähere Bezeichnung der Betätigungsart 
+\item Angabe ob Proportionalventil (erkennbar an Querstrichen unter- und oberhalb der Quadrate)
+\end{itemize}
+\subsection{Schaltsymbole der Pneumatik}
+\graphiccol{Schaltsymbole_Pneumatik_1}
+\graphiccol{Schaltsymbole_Pneumatik_2}
+\graphiccol{Schaltsymbole_Pneumatik_3}
+
+\subsection{Schaltsymbole Ventilbetätigung}
+\graphiccol{Schaltsymbole_Ventilbetaetigung}
+
+
+%\newpage
+%\part*{Anhang}
+%\section*{Stichwortverzeichnis}
+%\begin{tabular}{ll}
+%4/3 Poportionalwegeventil & 06.01 - 5ff \\
+%Differentialzylinder & 05.01 - 49 \\
+%Druckverstärkung 06.02 - 3 \\
+%Druckwage & 06.01 - 6 \\
+%Eilgang & 05.01 - 50 \\
+%Einkantensteuerung & 06.02 - 7 \\
+%Elastizität der Druckflüssigkeit & 01.02 - 12 \\
+%Endlagendämpfung & 05.01 - 45 \\
+%Hydrotransformator & 05.01 - 53 \\
+%Korrosionsschutz & 05.01 - 41 \\
+%Stossdämpfer & 05.01 - 46 \\
+%Ventilgrössenauslegung & 06.03 - 9ff \\
+%Vierkantensteuerung 06.02 - 17 \\
+%Volumenstromverstärkung & 06.02 - 3 \\
+%Widerstandssteuerung & 06.02 - 2 \\
+%Zweikantensteuerung 06.02 - 11 
+%\end{tabular}
+
+
+
+
+
+
+
+
+
+
+\end{multicols*}
+\end{document}
