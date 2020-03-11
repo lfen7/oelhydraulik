@@ -1,0 +1,95 @@
+\section{Hydraulikzylinder}
+Zylinder wandeln hydraulische Leistung mittels linearen Bewegungen in Kraft um.  
+
+
+\subsection{Grundbauarten}
+\subsubsection*{Gleichganzylinder}
+\graphicsm{zyl_gleichgang}
+Dank der durchgehenden Kolbenstange steht für beide Richtungen die gleiche Fläche zur Verfügung. Die Dynamik wird dadurch stark erhöht.
+
+
+\subsubsection*{Differentialzylinder}
+\graphicsm{zyl_differential}
+Zylinder mit nur einer einseitigen Kolbenstange. Geeignet wenn nur in eine Richtung Arbeit verrichtet werden soll. Querkräfte werden jedoch schlechter aufgenommen.
+
+Einziger Zylindertyp mit unterschiedlicher Verfahrgeschwindigkeit.
+
+
+\subsubsection*{Plunger Zylinder}
+\graphicsm{zyl_plunger}
+Verfügen über nur einen Druckanschluss und brauchen daher einen weiteren Mechanismus um den Zylinder wieder einzufahren (externe Last oder Feder). 
+
+
+
+\subsection{Grundgleichungen}
+\graphiccol{zylinderkraefte}
+\begin{align*}
+&F_B = F_P - F_R - F_L = m \cdot a \\
+&F_P - F_R = (p_A \cdot A_K - p_B \cdot A_R) \cdot \eta_{hm} \\
+&v = \frac{Q_K}{A_K} = \frac{Q_R}{A_R} \tag{stationäre Geschw.}
+\end{align*}
+\begin{tabular}{ll}
+$\eta_{hm}:$ & Hydraulisch-mechanischer Wirkungsgrad
+\end{tabular} \\
+
+\vfill
+\columnbreak
+
+\subsection{Knicksicherheit}
+\subsubsection*{Eulerfaktor}
+\graphiccol{eulerfall}
+
+\subsubsection*{Korrekturfaktor}
+\graphiccol{korrekturfaktor}
+
+\subsubsection*{Schlankheitsgrad}
+\myeqstar{
+\lambda = 4 \cdot K \cdot \frac{h}{d_S}
+}
+\begin{tabular}{ll}
+$K:$ & Korrekturfaktor \\
+$h:$ & Hub \\
+$d_S:$ & Durchmesser Stange
+\end{tabular}
+
+
+\subsubsection*{Grenzwert Knicksicherheit}
+\myeqstar{
+&\lambda_G = \pi \cdot \sqrt{\frac{E}{R_p}} \tag{Grenzwert} \\
+\Rightarrow & \left( \frac{h}{d_S}\right)_G = \frac{\pi}{4 K} \cdot \sqrt{ \frac{E}{R_p}}
+}
+
+\begin{itemize}
+\item Fall $\frac{h}{d_S} >= \left( \frac{h}{d_S}\right)_G; \quad \lambda \geq \lambda_G$:
+Elastischer Biegefall nach Euler
+\begin{align*}
+\sigma_K = \frac{\pi^2 \cdot E}{\lambda^2}
+\end{align*}
+%
+\item Fall $\frac{h}{d_S} < \left( \frac{h}{d_S}\right)_G; \quad \lambda \leq \lambda_G$: 
+Plastischer Biegefall nach Tetmajer
+\begin{align*}
+\sigma_K = a-b \cdot \lambda
+\end{align*}
+\end{itemize}
+
+Werte für $a$ und $b$: \\
+
+\begin{tabular}{lcc}
+Material & $a$ & $b$ \\
+\hline \\
+Baustahl E 335 & $335$ & $0.62$ \\
+Vergütungsstahl 16NiCr4 & $470$ & $2.30$
+\end{tabular}
+
+
+\subsubsection*{Auslegung im Eulerfall für Differenzial-Zylinder}
+\begin{align*}
+F_{max} &= \frac{\pi^3}{64} \cdot \frac{d_S^4 \cdot E}{K^2 \cdot h^2} \\
+h_{max} &= \frac{\pi \cdot d_S^2}{8 \cdot K} \cdot \sqrt{\frac{\pi \cdot E}{F_{max}} } \\
+d_{S_{min}} &= \frac{4 d_K}{\pi d_S} \cdot K \cdot h \cdot \sqrt{\frac{\eta_{hm} \cdot p_{max}}{E} } \\
+h_{max} &= \frac{\pi \cdot d_s^2}{4 K d_K} \cdot \sqrt{\frac{E}{\eta_{hm} \cdot p_{max}} }
+\end{align*}
+
+
+\newpage

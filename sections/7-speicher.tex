@@ -1,0 +1,84 @@
+\section{Speicher}
+Anwendungen:\begin{itemize}
+\item Schnellen Ausgleich von Volumenstrom 
+\item Schwingsungsreduktion
+\item Enthaltene Energie steht auch bei Stromausfall zur Verfügung
+\item Regeneration von Bremsenergie
+\end{itemize}
+
+Verschiedene Arten von Speicher:
+\begin{itemize}
+\item Blasenspeicher:
+\begin{itemize}
+\item Gummiblase im Speicher enthält das Kompressionsgas.
+\item  Sollte immer aufrecht stehen (gleichmässige Belastung der Blase).
+\item Hohe Dynamik
+\end{itemize}
+\item Kolbenspeicher
+\begin{itemize}
+\item Trennkolben aus festem Material (Metall), besser geeignet für grössere Volumina ($>50 l$). 
+\end{itemize}
+\item Membranspeicher
+\begin{itemize}
+\item Dünne Membran trennt Medien.
+\item Nur für sehr kleine Volumina geeignet ($<10 l$). 
+\item Ausrichtung im Gegensatz zu Blasenspeicher egal. 
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Auslegung von Speichern}
+\subsubsection{Volumenbedarf}
+$0 \rightarrow 1$: Isotherm \\
+ $1 \rightarrow 2$: Polytrop
+\begin{align*}
+V_0 = \frac{\Delta V}{\frac{p_0}{p_1} \cdot \left[ 1 - \left( \frac{p_1}{p_2} \right) ^{\frac{1}{n}} \right]}
+\end{align*}
+
+$0 \rightarrow 1$: Polytrop \\
+ $1 \rightarrow 2$: Polytrop
+\begin{align*}
+V_0 = \frac{\Delta V}{\left( \frac{p_0}{p_1} \right)^{\frac{1}{n}} - \left( \frac{p_0}{p_2} \right)^{\frac{1}{n}}}
+\end{align*}
+
+\begin{tabular}{ll}
+$n:$ & Polytropenexponent
+\end{tabular} \\
+
+
+
+\subsubsection{Pulsationsdämpfung}
+\begin{align*}
+\delta &= \frac{p_{Amplitude}}{p_{Mittelwert}} = \frac{p_2 - p_1}{p_2 + p_1} \\
+V_0 &= \frac{p_1}{p_0} \cdot \frac{\Delta V}{1 - \left( \frac{1-\delta}{1+\delta}\right)^{\frac{1}{n}}}
+\end{align*}
+
+
+\subsection{Speicherdynamik}
+\begin{align*}
+\omega_s &= \sqrt{\frac{1}{C_H \cdot L_H}} \tag{Eigenfrequenz} \\
+C_H &= \frac{V_m}{\kappa \cdot p_m} \tag{Speicherkapazität} \\
+L_S &= \frac{m_k}{A_k^2} \tag{Speicherinduktivität} \\
+L_A &= \frac{\rho \cdot l_S}{A_S} \tag{Anschlussinduktivität} \\
+L_H &= L_S + L_A
+\end{align*}
+
+\begin{tabular}{ll}
+$p_m:$ & Mittlerer Druck \\
+$V_m:$ & Mittleres Volumen \\
+$\kappa:$ & Isentropenexponent \\
+$\rho:$ & Dichte des Öls \\
+$A_K:$ & Querschnittfläche Trennelement \\
+$m_k:$ & Masse Trennelement \\
+$A_S:$ & Querschnittfläche Anschluss \\
+$l_S:$ & Länge des Anschlusses
+\end{tabular}
+
+
+
+
+
+
+
+\vfill
+\columnbreak

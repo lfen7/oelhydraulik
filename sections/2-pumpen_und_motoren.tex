@@ -1,0 +1,226 @@
+\section{Pumpen und Motoren}
+\subsection{Wirkungsgrade}
+\begin{itemize}
+\item Hydraulisch-mechanisch $\eta_{hm}$: Verluste in hydraulischen An-/Abtriebsgliedern, die im wesentlichen durch Reibungskräfte, die drehzahl-, druck- oder geschwindigkeitsabhängig sein können sowie durch Strömungsverluste hervorgerufen werden. Dabei ergeben sich die Verlustmomente.
+\item Volumetrischer Wirkungsgrad $\eta_{vol}$: Der volumetrische Wirkungsgrad beschreibt das Verhältnis von effektivem (tatsächlich aufgenommenem oder abgegebenem) Volumenstrom zu theoretischen Volumenstrom aufgrund der Verdrängerkinematik und der Drehzahl.
+\end{itemize}
+
+\subsubsection{Beispiel: Zylinder}
+Zylinder mit hydraulisch-mechanischem Wirkungsgrad $\eta_{hm}$. Reibung bringt immer Verluste, daher lassen sich zwei Fälle unterscheiden:
+\begin{enumerate}
+\item Druck wird im  Zylinder zu Kraft umgewandelt. Dabei wird die effektive Kraft  mit dem Wirkungsgrad reduziert:
+\begin{align*}
+\eta_{hm} \cdot F = P \cdot A  
+\end{align*}
+\item Kraft wird in Druck umgewandelt. Dabei wird der erzielte Druck mit dem Wirkungsgrad reduziert.
+\begin{align*}
+F = \eta_{mh} \cdot P \cdot A
+\end{align*}
+\end{enumerate}
+
+\subsection{Vierquadrantenbetrieb}
+Grundsätzlich können Pumpen und Motoren (allgemein Verdrängereinheiten genannt) auch im jeweils anderen Betriebszustand arbeiten, sofern es die Bauart zulässt.
+\graphiccol{vierquadrantenbetrieb}
+Die Richtung des Lastmoments und der Umdrehung bestimmen die Art des Betriebes. Somit ergeben sich vier verschiedene Kombinationen, wovon je zwei Pumpen oder Motoren entsprechen.
+
+
+
+
+
+\subsection{Verdrängereinheit}
+Einfaches Modell eines Kreisförmigen Zylinders. Das Volumen des kreisförmigen Zylinderrohres wird Schluckvolumen genannt (in diesem Fall $\pi  d  A$). 
+\graphicsm{verdraengereinheit}
+\myeqstar{
+M  = \Delta p \cdot \frac{V}{2 \pi}
+}
+\begin{tabular}{ll}
+$p:$ & Druck \\
+$M:$ & Moment \\
+$V:$ & Volumen
+\end{tabular}
+
+
+\vfill
+\columnbreak
+\subsection{Pumpen-Gleichungen}
+Wirkungsgrade:
+\myeqstar{
+\eta_{vol} &= \frac{Q_P}{n \cdot V_P} \tag{Volumetrisch} \\
+\eta_{hm} &= \frac{p_0}{M} \cdot \frac{V_P}{2 \pi} \tag{Hydraulisch-mechanisch} \\
+\eta_{Pumpe} &= \eta_{hm} \cdot \eta_{vol} = \frac{P_H}{P_m} \tag{Gesamt}
+}
+
+Der volumetrische Wirkungsgrad beispielsweise errechnet sich aus dem Quotienten zwischen theoretischem und praktischem Fördervolumen. In der Praxis ist das Fördervolumen durch Leckage und andere Verluste geringer. $\eta_{vol}$ reduziert somit den geförderten Volumenstrom. \\
+
+Weitere Gleichungen (Äuivalent zu den Gleichungen oben):
+\begin{align*}
+M &= p_0 \cdot \frac{V_P}{2 \pi} + M_R \tag{Pumpenmoment} \\
+Q_P &= n \cdot V_P - Q_L \tag{Volumenstrom} \\
+P_H &= p_0 \cdot Q_P = \eta_{hm} \cdot \eta_{vol} \cdot P_m \tag{Leistung}
+\end{align*}
+Dabei ist der Leckage Volumentstrom $Q_L$ in $\eta_{vol}$ enthalten und das Verlustmoment $M_R$ in $\eta_{hm}$.
+
+\begin{tabular}{ll}
+$n:$ & Drehzahl \\
+$Q_p:$ & Volumenstrom gefördert\\
+$V:$ & Fördervolumen \\
+$p_0:$ & Druck am Pumpenausgang \\
+$M:$ & Antriebsmoment
+\end{tabular}
+
+\subsection{Motoren-Gleichungen}
+\myeqstar{
+\eta_{vol} &= \frac{n \cdot V_M}{Q_M} \tag{Volumetrisch} \\
+\eta_{hm} &= \frac{M}{p_0} \cdot \frac{2 \pi}{V_M} \tag{Hydraulisch-Mechanisch}
+}
+Der Volumetrische Wirkungsgrad $\eta_{vol}$ reduziert das effektive Schluckvolumen. Der hydraulisch-mechanische Wirkungsgrad $\eta_{hm}$ reduziert die Motorleistung. 
+
+
+Weitere Gleichungen:
+\begin{align*}
+M &= p_0 \cdot \frac{V_M}{2 \pi} - M_R \tag{Lastmoment} \\
+Q_M &= n \cdot V_M + Q_L \tag{Volumenstrom} \\
+P_H &= p_0 \cdot Q_M = \frac{P_m}{\eta_{hm} \cdot \eta_{vol}}
+\end{align*}
+
+\begin{tabular}{ll}
+$n:$ & Drehzahl \\
+$Q_m:$ & Schluckvolumenstrom des Motors\\
+$p_0:$ & Druck am Motoreneingang \\
+$V_M:$ & Schluckvolumen \\
+$P_H:$ & Leistung der Ölversorgung \\
+\end{tabular}
+
+
+
+\subsection{Konstantpumpen}
+\graphiccol{konstantpumpen}
+
+\subsubsection{Aussenzahnradpumpen}
+\graphiccol{aussenzahnradpumpe}
+\begin{align*}
+V &= 2 \cdot b_z \cdot \pi \cdot d_z \cdot h_z \\
+m &= \frac{d_z}{z} = h_z
+\end{align*}
+
+\myeqstar{
+V = 2 \cdot b_z \cdot \pi \cdot z \cdot m^2
+}
+
+\begin{tabular}{ll}
+$b_z:$ & Zahnbreite $[mm]$\\
+$d_z:$& Teilkreisdurchmesser $[mm]$\\
+$h_z:$& Zahnhöhe $[mm]$\\
+$m:$& Modul $[mm]$\\
+$z:$& Anzahl Zähne $[-]$
+\end{tabular} \\
+
+
+Hohe Drehzahl, mittleres Fördervolumen. Eignet sich gut für mittleren Druckbereich. Grösste Pulsationen, Geräuschintensiv. Zahnradpumpen sind die am meisten verbreitete Form auf dem Markt. Die Herstellung ist günstig da vergleichsweise wenige und relativ einfache Teile benötigt werden. Das Öl wird nicht verdichtet da der Druckraum seine Grösse nicht ändert. Die Verdichtung erfolgt erst bei Verbindung zur Hochdruckseite, was Pulsation mit sich bringt. Die meisten Zahnräume sind miteinander durch Ringnuten verbunden, so dass das Druckfeld kontinuerlich anstatt schlagartig aufgebaut wird. 
+
+
+\subsubsection{Innenzahnradpumpe}
+\graphiccol{innenzahnradpumpe}
+
+\begin{align*}
+V &= b_z \cdot \pi \cdot d_z \cdot h_z \\
+m &= \frac{d_z}{z} = h_z
+\end{align*}
+\myeqstar{
+V = b_z \cdot \pi \cdot z \cdot m^2
+}
+
+\begin{tabular}{ll}
+$b_z:$ & Zahnbreite $[mm]$\\
+$d_z:$& Teilkreisdurchmesser Antriebsritzel $[mm]$\\
+$h_z:$& Zahnhöhe $[mm]$\\
+$m:$& Modul $[mm]$\\
+$z:$& Anzahl Zähne $[-]$
+\end{tabular} \\
+
+Bei der Innenzahnradpumpe ändert sich das Volumen des Verdrängungsraum. Das treibende Zahnrad läuft exzentrisch, ein Füllstück sorgt für die Abdichtung zwischen Saug- und Druckseite. Gut geeignet für hohe Drehzahlen. Es existieren auch zweistufige Bauarten, welche durch das Aufteilen des Prozesses die Lagerbelastung reduzieren. 
+
+
+\subsubsection{Kolbempumpen}
+Hochdrukbereich. Axialkolbeneinheiten sind aber stark von der Viskosität und somit auch von der Temperatur abhängig. 
+
+
+
+\subsubsection{Schraubenspindelpumpe}
+\graphiccol{schraubenspindelpumpe}
+
+Sehr geringer Betriebsdruck, kann aber grosse Volumenströme beinahe pulsationsfrei fördern (Aufzughydraulik zbsp). 
+Druckbereich stark beschränkt, so dass nur niedrige und mittlere Drücke möglich sind. Bedingt durch die mechanische Funktionsweise ist der Wirkungsgrad der geringste von allen Pumpenarten. Dafür entstehen keine Turbulenzen und keine Kompressionen des Mediums, was in einer verschindend geringen Pulsation resultiert. 
+
+
+
+\subsection{Verstellpumpen}
+\graphiccol{verstellpumpen}
+
+\subsubsection{Axialkolben}
+Mehrere kleine Zylinder sind kinematisch gekoppelt. Bei Axialkolbenverdränger mit Schrägscheibe kann das Verdrängervolumen (Pumpe) resp. Schluckvolumen (Motor) präzise über einen Neigewinkel eingestellt werden.
+
+\subsubsection{Schrägscheibenverstellpumpe}
+\graphiccol{schraegscheibenverstellpumpe}
+Durch Veränderung des Neigungswinkels der Schrägscheibe ergibt sich ein unterschiedlicher Kolbenhub. Bei dieser Bauform werden allerdings Querkräfte auf die Kolben erzeugt, welche als Moment auf der Welle spürbar sind. Die Kolbentrommel ist fest mit der Antriebswelle verbunden. Durch Drehung der Welle werden somit die Kolben ebenfalls in Rotation versetzt. Eine Kolbenrückhalteplatte hindert die einzelnen Zylinder am Abheben von der Schrägscheibe im Falle eines Unterdrucks. 
+
+\myeqstar{
+V = \frac{pi}{2} \cdot n_z \cdot d_z^2 \cdot r_{KT} \cdot \tan \alpha \tag{Schluckvolumen}
+}
+\begin{tabular}{ll}
+$n_z:$ & Anzahl Kolben $[-]$ \\
+$A_z:$ & Kolbenfläche $[mm]$ \\
+$d_z:$ & Kolbendurchmesser $[mm]$ \\
+$\alpha: $ & Winkel zwischen Scheibe und Kolben
+\end{tabular}
+
+
+\subsubsection{Schrägachsenverstellpumpe}
+\graphiccol{schraegachsenverstellpumpe}
+Wie bei der Schrögscheibenpumpe wird die Trommel direkt von der Welle angetrieben. Im Unterschied dazu laufen hier die Kolben abgewinkelt zur Antriebswelle und werden ebenfalls von dieser Angetrieben, sodass keine Querkräfte auf die Kolben wirken. Dadurch sind höhere Drehzahlen möglich wodurch diese Bauart gut für Motoren geeignet ist. 
+
+
+\subsubsection{Radialkolben Bauart}
+\graphiccol{radialpumpe}
+Bei dieser Bauform stehen die Zylinder radial zur Drehachse, also Senkrecht zur Antriebswelle. Die Hubbewegung wird entweder durch Exzentrizität oder durch auf der Welle befindliche Exzenter bewirkt. Die Verstellung der Radialkolbenpumpe erfolt über eine exzentrische Verschiebung $e$ des Hubringes. 
+
+\myeqstar{
+V = \frac{\pi}{2} \cdot d_k^2 \cdot e \cdot z \tag{Fördervolumen}
+} 
+\begin{tabular}{ll}
+$d_k:$ & Kolbendurchmesser $[-]$ \\
+$e:$ & Exzentrizität $[mm]$ \\
+$z:$ & Kolbenanzahl $[-]$ 
+\end{tabular}
+
+
+
+\subsubsection{Flügelzellenpumpen}
+\graphiccol{fluegelzellenpumpe}
+Sind bei allen Kennwerten eher im Mittelfeld anzufinden.
+Charakteristisch sind geringe Förderstrom- und Druckpulsation und dadurch auch ein geringes Betriebsgeräusch. Bei dieser Art Pumpe wir die Hydraulikflüssigkeit von Zellen, gebildet von je zwei Flügeln und der Gehäusewand, verdrängt. Die Flügel sind druckausgeglichen, sodass bereits eine geringe rotatorische Bewegung sie nach aussen presst. Teilweise befinden sich zusätzlich Federn im Innern welche dies unterstützen. Das Förervolumen wird über die Exzentrizität gestäuert. Wird die Exzentrizität über eine Feder bewirkt, so hat man gleichzeitig eine Druckbegrenzung, da beim Überschreiten eines gewissen Druckes die Feder nachgibt und die Exzentrizität reduziert. 
+
+\myeqstar{
+V = 2 \cdot e \cdot b \cdot (\pi \cdot d_G - z \cdot s) \tag{Fördervolumen}
+}
+\begin{tabular}{ll}
+$d_G:$ & Durchmesser Gehäusebohrung $[mm]$\\
+$e:$ & Extentrizizät $[mm]$\\
+$z:$ & Anzahl der Flügel $[-]$\\
+$s:$ & Dicke der Flügel $[mm]$\\
+$b:$ & Flügelbreite $[mm]$
+\end{tabular}
+
+
+\subsubsection{Gerotor}
+\graphiccol{gerotor}
+Gerotor-Motoren sind robust, laufen langsam und bieten ein hohes Drehmoment. 
+
+
+\subsection{Pulsation}
+\graphiccol{pulsation}
+Jede Verdrängerbauart besteht aus einer finiten Anzahl Förderelemente, welche zu Ungleichmässigkeiten im Volumenstrom führen. Eine einfache Anschauung zeigt, dass bei ungerader Zähnezahl die Pulsationen erheblich geringer sind. Dazu betrachtet man die Volumenstromkurve eines Förderlemenets, welche durch einen Sinus dargestellt werden kann. Im resultierenden Zeigerdiagram sieht man, dass eine ungerade Anzahl zu geringeren Unterschieden führt. 
+
+
+\vfill
+\columnbreak

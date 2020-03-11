@@ -1,0 +1,86 @@
+\section{Servozylinder Antrieb}
+\myeqstar{
+Q_L &= Q_0 \cdot \frac{y}{y_{max}} \cdot \sqrt{1-\frac{p_L}{p_0}} \tag{Lastvolumenstrom} \\
+Q_0 &= Q_N \cdot \sqrt{ \frac{p_0}{p_N} } \tag{Maximaler Ventilvolumenstrom}
+}
+
+
+
+\subsection{Kennlinienfeld}
+\graphiccol{kennlinienfeld}
+\begin{itemize}
+\item Arbeitspunkt
+\begin{align*}
+\frac{p_L}{p_0}, \quad \frac{y}{y_{max}}
+\end{align*}
+\item Druckflussverstärkung:
+\begin{align*}
+V_{QY} = 
+\frac{\partial Q_L}{\partial y} = \frac{Q_0}{y_{max}} \sqrt{1-\frac{p_L}{p_0}}
+\end{align*}
+\item Hydraulischer Leitwert:
+\begin{align*}
+V_{Qp} = \frac{\partial Q_L}{\partial p_L} = \frac{1}{2} \frac{Q_0}{p_0} \frac{\frac{y}{y_{max}}}{\sqrt{1-\frac{p_l}{p_0}}}
+\end{align*}
+\item Druckversärkung:
+\begin{align*}
+V_{py} = \frac{\partial p_L}{\partial y} = 2 \frac{p_0}{y} \cdot \left(1-\frac{p_L}{p_0} \right)
+\end{align*}
+\end{itemize}
+
+
+
+\subsection{Dynamische Kennwerte}
+Die Dynamischen Kennwerte beziehen sich auf die linearisierte Steuerkette.
+
+\graphiccol{differentialgleichungssystem}
+
+\graphiccol{steuerkette}
+\begin{itemize}
+\item Steuerverstärkung:
+\begin{align*}
+K = \frac{V_{QY}}{A}
+\end{align*}
+\item Dämpfungsgrad:
+\begin{align*}
+D &= \frac{1}{2 A} \left[ (V_{QP} + K_L ) \cdot \sqrt{\frac{2 m E}{V_0}} + R \cdot \sqrt{\frac{V_0}{2 m E}} \right] \\
+\\
+&\text{mit}\quad V_0 = 0.5 \,  h \, A: \\
+D &= \frac{1}{2 A} \cdot \left[ (V_{Qp} + K_L) \cdot \sqrt{\frac{4  m \cdot E}{h \cdot A}} + R \sqrt{ \frac{h \cdot A}{4  m \cdot E}} \right]
+\end{align*}
+\begin{tabular}{ll}
+$K_L:$ & Leckage Faktor \\
+$R:$ & Reibungs-Faktor
+\end{tabular} \\
+
+\item Eigenfrequenz:
+\begin{align*}
+\omega_0 &= A \sqrt{\frac{2 E}{m V_0}} \\
+\\
+\text{mit} & \quad V_0 = 0.5 \, h \, A: \\
+\omega_0 &= \sqrt{ \frac{4 \cdot E \cdot A}{m \cdot h} } 
+\end{align*}
+\item Maximale Kreisverstärkung mit einfachem P-Regler:
+\begin{align*}
+V_K = 2 \cdot D \cdot \omega_0 
+\end{align*}
+\end{itemize}
+
+
+\subsubsection{Mit Zustandsregler}
+Die veränderte Dynamik mit Zustandsregler ist
+\begin{align*}
+\bar{\omega}_0 &= \omega_0 \cdot \sqrt{1 + K \cdot K_v} \\
+\\
+\bar{D} &= \frac{D + 0.5\cdot K \cdot \omega_0 \cdot K_A}{\sqrt{1+K\cdot K_V}}
+\end{align*}
+
+\begin{tabular}{ll}
+$K_V:$ & Geschwindigkeitsfaktor \\
+$K_A:$ & Beschleunigungsfaktor
+\end{tabular}\\
+
+Für Überschwingungsfreises Positionieren:
+\begin{align*}
+K_P = 0.27 \cdot \bar{\omega}_0 \qquad \bar{D}_{opt} = 0.613
+\end{align*}

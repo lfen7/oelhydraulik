@@ -1,0 +1,121 @@
+\section{Pneumatik}
+\subsection{Grundlagen}
+\subsubsection{Ideales Gasgesetz}
+\begin{align*}
+p\cdot V  &= n \cdot R \cdot T \\
+p \cdot V &= m \cdot R_s \cdot T
+\end{align*}
+\begin{tabular}{ll}
+$p:$ & Druck \\
+$V:$ & Volumen \\
+$n:$ & Stoffmenge \\
+$R:$ & Universelle Gaskonstante $[\frac{J}{mol \, K}]$ \\
+$R_s:$ & Spezifische Gaskonstante (Luft: $R_s = 286.95 [\frac{J}{kg \, K}]$) \\
+$T:$ & Temperatur
+\end{tabular} \\
+
+\begin{itemize}
+\item Isothermer Prozess
+\begin{align*}
+p \cdot V = const.
+\end{align*}
+\item Isobarer Prozess
+\begin{align*}
+\frac{T}{V} = const. 
+\end{align*}
+\item Isochorer Prozess
+\begin{align*}
+\frac{T}{p} = const.
+\end{align*}
+\item Isentroper Prozess ($S=const.$)
+\begin{align*}
+&p\cdot V^\kappa = const.
+&n=  \kappa = \frac{c_p}{c_v}
+\end{align*}
+\end{itemize}
+
+\subsubsection{Spezifische Gaskonstante}
+\begin{align*}
+R = \frac{R_M}{M}
+\end{align*}
+\begin{tabular}{ll}
+$R_M = 8.31:$ & Molare Gaskonstante $[\frac{J}{mol K}]$ \\
+$M:$ & Molare Masse $[kg/mol]$
+\end{tabular} \\
+
+
+\subsubsection{Zustandsänderung idealer Gase}
+\begin{align*}
+\frac{p \cdot V}{T} &= const. \\
+p \cdot V^n &= const.
+\end{align*}
+\begin{tabular}{ll}
+$n:$ & Polytropenexponent
+\end{tabular}
+
+
+\subsection{Feuchte Luft}
+\myeqstar{
+p = p_L + p_W \tag{Gesamtluftdruck}
+}
+\begin{align*}
+&p_w \cdot V = m_w \cdot R_w \cdot T  \\
+&p_L \cdot V = m_L \cdot R_L \cdot T  \\
+\end{align*}
+\myeqstar{
+x = \frac{m_w}{m_L} = \frac{R_L}{R_w} \cdot \frac{p_w}{p-p_w} \tag{Wassergehalt}
+}
+
+\begin{tabular}{ll}
+$R_L:$ & 286.95 [J/KgK] \\
+$R_W:$ & 461.50 [J/KgK] 
+\end{tabular}
+
+
+\subsubsection{Relative Luftfeuchtigkeit}
+\graphiccol{taupunktkurve}
+Unterhalb der Kurve bildet sich kein Kondensat, die relative Luftfeuchtigkeit ist $ \varphi < 100 \%$. 
+Auf der Taupunktkurve ist  $\phi = 100 \%$. Kondensat bildet sich im Bereich oberhalb der Kurve. 
+
+\myeqstar{
+\varphi = \frac{m_{WR}}{m_{WRS}} \tag{Relative Luftfeuchtigkeit}
+}
+\begin{align*}
+m_{WRS} = \frac{m_{WS}}{V} = \frac{p_{WS}}{R_W \cdot T}
+\end{align*}
+
+\begin{tabular}{ll}
+$p_{wS}:$ & max. Partialdruck $[N/m^2]$ \\
+$m_{WRS}:$ & Sättigung Relative Wassermenge $[kg]$ \\
+$m_{WR}:$ & Relative Wassermenge $[kg/m^3]$
+\end{tabular}
+
+\subsection{Bauelemente der Pneumatik}
+\subsubsection{Pneumatischermuskell}
+\graphiccol{Pneumatischermuskel}
+\begin{itemize}
+\item kein Stick-Slip bis zum Stillstand
+\item keine Dichtungen
+\item geringer Energieverbrauch
+\item Höchstens 1/3 des Querschnitts
+\item Erheblich geringeres Gewicht
+\item Billiger und einfacher in der Handhabung
+\item positionieren in jeder Zwischenstellung
+\end{itemize}
+
+\graphiccol{Pneumatischermuskel_Kennlinienfeld}
+\begin{itemize}
+\item Materialdehnung (0 bar Kurve)
+\item relative Verformung bezogen auf Baulänge [\%]
+\item weitgehend lineare Kennlinie durch geringe Volumenänderung
+\end{itemize}
+
+\subsubsection{Vakumduese mit Saugnapfl}
+\graphiccol{Vakumduese_mit_Saugnapf}
+\begin{itemize}
+\item Vakuumdüse arbeitet mit Venturiprinzip
+\item Unterdruck am Saugnapf
+\item Tank wird gefüllt
+\item Tank entleert sich über Saugnapf bei Druckabschaltung
+\item Luftimpuls stösst das gehaltene Werkstück ab
+\end{itemize}

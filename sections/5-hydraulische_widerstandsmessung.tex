@@ -1,0 +1,142 @@
+\section{Hydraulische Widerstandssteuerung}
+\graphicsm{signalumsetzung}
+\myeqstar{
+y_L = y_Q + y_p = \frac{Q_L}{C_0} + \frac{p_L}{E_0} = \frac{\Delta V \cdot A}{C_0} + \frac{\Delta F}{A \cdot E_0}
+}
+
+\begin{tabular}{ll}
+$y_L:$ & Ventilöffnung \\
+$\Delta v:$ & Geschwindigkeitsänderung \\
+$A:$ & Wirkfläche \\
+$E_0:$ & Druckverstärkung \\
+$C_0:$ & Volumenstromverstärkung \\
+$\Delta F:$ & Kraftänderung
+\end{tabular} \\
+
+Erhöhung von $C_0, E_0$ bewirkt:
+\begin{itemize}
+\item Kleinere Steuersignale nötig 
+\item Höhere Laststeifigkeit 
+\item Bessere Dynamik des Ventils
+\end{itemize}
+
+
+\subsection{Ventile - Grundlagen}
+\myeqstar{
+Y = \alpha_D \cdot \pi \cdot d \cdot \sqrt{\frac{2}{\rho}} \tag{Ventilkonstante}
+}
+\begin{tabular}{ll}
+$Y:$ & Regelblende \\
+$s:$ & Stellweg \\
+$\alpha_D:$ & Blendenbeiwert
+\end{tabular} \\
+
+
+Ventilhub: 
+\begin{itemize}
+\item Negative Überdeckung (ständige Leckage):
+\begin{align*}
+y_N = s_N + s_0 
+\end{align*}
+\item Nullschnitt:
+\begin{align*}
+y_N = s_N
+\end{align*}
+\item Posiive Überdeckung (Längerer Stellweg)
+\begin{align*}
+y_N = s_N - s_0
+\end{align*}
+\end{itemize}
+
+
+\subsection{Einkantensteuerung}
+\graphiccol{einkantensteuerung}
+
+\myeqstar{
+Q_A = Y \cdot (s_0 + s) \cdot \sqrt{p_0 - p_A} - Y_T \cdot \sqrt{p_A} \tag{Lastvolumenstrom} 
+}
+
+\begin{tabular}{ll}
+$Q_A:$ & Volumenstrom Verbraucher \\
+$Y, Y_T:$ & Blendenkonstanten \\
+$s:$ & Stellweg \\
+$y_L:$  & Ventilöffnung $y_L = s + s_0$
+\end{tabular} \\
+
+
+
+
+%\myeqstar{
+%\frac{p_A}{p_0} &= \frac{\left(1+\frac{s}{s_0} \right)^2}{\left( \frac{Y_T}{Y \cdot s_0} \right)^2 + \left(1 + \frac{s}{s_0} \right) ^2} = \frac{\left(1+\frac{s}{s_0} \right)^2}{ K^2 + \left(1 + \frac{s}{s_0} \right) ^2} \\
+%Y_T &= \alpha_D \cdot A_B \cdot \sqrt{\frac{2}{\rho}} \tag{Festblende} \\
+%Y &= \alpha_D \cdot \pi \cdot d \cdot \sqrt{\frac{2}{\rho}} \tag{Regelblende}
+%}
+%\begin{tabular}{ll}
+%$Y:$ & Ventilkonstante \\
+%$s:$ & Stellweg \\
+%$\alpha_D:$ & Blendenbeiwert
+%\end{tabular} \\
+
+\myeqstar{
+K = \frac{A_B}{\pi \cdot d \cdot s_0} \tag{Ventilkonstante}
+}
+\begin{tabular}{ll}
+$A_B:$ & Fläche Verbraucheranschluss (Anschluss $A$)  \\
+$d:$ & Durchmesser von Ventil Zylinder
+\end{tabular} \\
+
+Die Ventilkonstante ist das Flächenverhältnis der Blenden bei $s=0$, also in Mittelstellung. 
+
+\myeqstar{
+E_0(K=1) = \frac{1}{2}
+ \cdot \frac{p_0}{s_0} \tag{Druckverstärkung}
+}
+
+\myeqstar{
+C_0 = \frac{\Delta Q_A}{\Delta s} = \sqrt{\frac{1}{2}} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung}
+}
+
+\myeqstar{
+y_L = \sqrt{2} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} + 2 \frac{F \cdot s_0}{A \cdot p_0}
+}
+
+
+\subsection{Zweikantensteuerung}
+\graphiccol{zweikantensteuerung}
+
+\myeqstar{
+Q_A &= Y \cdot (s_0 + s) \cdot \sqrt{p_0 - p_A} - Y \cdot (s_0 - s) \cdot \sqrt{p_A} \tag{Lastvolumenstrom} \\
+\frac{p_A}{p_0} &= \frac{1}{2} \cdot \frac{\left(1+\frac{s}{s_0} \right)^2}{1+\left( \frac{s}{s_0} \right)^2} \\
+\\
+E_0 &= \frac{p_0}{s_0} \tag{Druckverstärkung} \\
+\\
+C_0 &= \frac{\Delta Q_A}{\Delta s} = \sqrt{2} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung} \\
+y_L &= \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} +  \frac{F \cdot s_0}{A \cdot p_0}
+}
+
+%\begin{tabular}{ll}
+%$Y:$ & Blendenkonstante 
+%\end{tabular} \\
+
+%\myeqstar{
+%\frac{p_A}{p_0} = \frac{1}{2} \cdot \frac{\left(1+\frac{s}{s_0} \right)^2}{1+\left( \frac{s}{s_0} \right)^2}
+%}
+%
+%\myeqstar{
+%E_0 &= \frac{p_0}{s_0} \tag{Druckverstärkung} \\
+%C_0 &= \frac{\Delta Q_A}{\Delta s} = \sqrt{2} \cdot Y \cdot \sqrt{p_0} \tag{Volumenstromverstärkung}
+%}
+%
+%\myeqstar{
+%y_L = \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} +  \frac{F \cdot s_0}{A \cdot p_0}
+%}
+
+
+\subsection{Vierkantensteuerung}
+\graphiccol{vierkantensteuerung}
+\myeqstar{
+\frac{p_L}{p_0} &= \frac{2 \frac{s}{s_0}}{1+\left( \frac{s}{s_0} \right)^2 } \\
+E_0 &= 2 \cdot \frac{p_0}{s_0}  \\
+c_0 &= \sqrt{2} \cdot Y \cdot \sqrt{p_0}  \\
+y_L &= \frac{1}{\sqrt{2}} \cdot \frac{v \cdot A}{Y \cdot \sqrt{p_0}} + \frac{1}{2} \frac{F \cdot s_0}{A \cdot p_0}
+}
