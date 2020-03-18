@@ -35,18 +35,26 @@ M  = \Delta p \cdot \frac{V}{2 \pi}
 }
 \begin{tabular}{ll}
 $p:$ & Druck \\
-$M:$ & Moment \\
+$M:$ & Drehmoment \\
 $V:$ & Volumen
 \end{tabular}
 
 
 \subsection{Pumpen-Gleichungen}
-Wirkungsgrade:
+\textbf{Wirkungsgrade:}
 \myeqstar{
 \eta_{vol} &= \frac{Q_P}{n \cdot V_P} \tag{Volumetrisch} \\
 \eta_{hm} &= \frac{p_0}{M} \cdot \frac{V_P}{2 \pi} \tag{Hydraulisch-mechanisch} \\
 \eta_{Pumpe} &= \eta_{hm} \cdot \eta_{vol} = \frac{P_H}{P_m} \tag{Gesamt}
 }
+
+\begin{tabular}{ll}
+$n:$ & Drehzahl \\
+$Q_p:$ & Volumenstrom gefördert\\
+$V:$ & Fördervolumen \\
+$p_0:$ & Druck am Pumpenausgang \\
+$M:$ & Antriebsmoment
+\end{tabular}
 
 Der volumetrische Wirkungsgrad beispielsweise errechnet sich aus dem Quotienten zwischen theoretischem und praktischem Fördervolumen. In der Praxis ist das Fördervolumen durch Leckage und andere Verluste geringer. $\eta_{vol}$ reduziert somit den geförderten Volumenstrom. \\
 
@@ -58,13 +66,6 @@ P_H &= p_0 \cdot Q_P = \eta_{hm} \cdot \eta_{vol} \cdot P_m \tag{Leistung}
 \end{align*}
 Dabei ist der Leckage Volumentstrom $Q_L$ in $\eta_{vol}$ enthalten und das Verlustmoment $M_R$ in $\eta_{hm}$.
 
-\begin{tabular}{ll}
-$n:$ & Drehzahl \\
-$Q_p:$ & Volumenstrom gefördert\\
-$V:$ & Fördervolumen \\
-$p_0:$ & Druck am Pumpenausgang \\
-$M:$ & Antriebsmoment
-\end{tabular}
 
 \subsection{Motoren-Gleichungen}
 \myeqstar{
@@ -94,8 +95,10 @@ $P_H:$ & Leistung der Ölversorgung \\
 \subsection{Konstantpumpen}
 \graphiccol{konstantpumpen}
 
+
 \subsubsection{Aussenzahnradpumpen}
-\graphiccol{aussenzahnradpumpe}
+\graphiccol{aussenzahnradpumpe}\\
+Fördervolumen: \\
 \begin{align*}
 V &= 2 \cdot b_z \cdot \pi \cdot d_z \cdot h_z \\
 m &= \frac{d_z}{z} = h_z
@@ -159,6 +162,7 @@ Druckbereich stark beschränkt, so dass nur niedrige und mittlere Drücke mögli
 Mehrere kleine Zylinder sind kinematisch gekoppelt. Bei Axialkolbenverdränger mit Schrägscheibe kann das Verdrängervolumen (Pumpe) resp. Schluckvolumen (Motor) präzise über einen Neigewinkel eingestellt werden.
 
 \subsubsection{Schrägscheibenverstellpumpe}
+Schrägscheibe – meist Verstellpumpe, Schrägachse – meist Konstantmotor.\\
 \graphiccol{schraegscheibenverstellpumpe}
 Durch Veränderung des Neigungswinkels der Schrägscheibe ergibt sich ein unterschiedlicher Kolbenhub. Bei dieser Bauform werden allerdings Querkräfte auf die Kolben erzeugt, welche als Moment auf der Welle spürbar sind. Die Kolbentrommel ist fest mit der Antriebswelle verbunden. Durch Drehung der Welle werden somit die Kolben ebenfalls in Rotation versetzt. Eine Kolbenrückhalteplatte hindert die einzelnen Zylinder am Abheben von der Schrägscheibe im Falle eines Unterdrucks. 
 
@@ -186,7 +190,7 @@ Bei dieser Bauform stehen die Zylinder radial zur Drehachse, also Senkrecht zur 
 V = \frac{\pi}{2} \cdot d_k^2 \cdot e \cdot z \tag{Fördervolumen}
 } 
 \begin{tabular}{ll}
-$d_k:$ & Kolbendurchmesser $[-]$ \\
+$d_k:$ & Kolbendurchmesser $[mm]$ \\
 $e:$ & Exzentrizität $[mm]$ \\
 $z:$ & Kolbenanzahl $[-]$ 
 \end{tabular}
@@ -214,6 +218,8 @@ $b:$ & Flügelbreite $[mm]$
 \graphiccol{gerotor}
 Gerotor-Motoren sind robust, laufen langsam und bieten ein hohes Drehmoment. 
 
+\subsection{Motoren}
+\graphiccol{hydraulikmotoren_tab}
 
 \subsection{Pulsation}
 \graphiccol{pulsation}
@@ -221,4 +227,3 @@ Jede Verdrängerbauart besteht aus einer finiten Anzahl Förderelemente, welche 
 
 
 \vfill
-\columnbreak
