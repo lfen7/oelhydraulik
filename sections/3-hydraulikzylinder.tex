@@ -32,8 +32,18 @@ Verfügen über nur einen Druckanschluss und brauchen daher einen weiteren Mecha
 $\eta_{hm}:$ & Hydraulisch-mechanischer Wirkungsgrad
 \end{tabular} \\
 
-\vfill
-\columnbreak
+\subsubsection{Wirkungsgrad}
+Berücksichtigung von Reibungsverlusten: \\
+
+\myeqstar{
+F &= p \cdot A  \cdot \eta_{hm} \\
+ F &= \frac{P A}{ \eta_{mh} }
+}
+\begin{tabular}{ll}
+$\eta_{hm}$ &  hydro-mechanischer Wirkungsgrad \\ & $\rightarrow$ von Druck zu Kraft\\
+$\eta_{mh}$ & mechanisch-hydraulischer Wirkungsgrad\\ &  $\rightarrow$ von Kraft zu Druck\\
+\end{tabular}
+
 
 \subsection{Knicksicherheit}
 \subsubsection*{Eulerfaktor}
@@ -91,5 +101,4 @@ d_{S_{min}} &= \frac{4 d_K}{\pi d_S} \cdot K \cdot h \cdot \sqrt{\frac{\eta_{hm}
 h_{max} &= \frac{\pi \cdot d_s^2}{4 K d_K} \cdot \sqrt{\frac{E}{\eta_{hm} \cdot p_{max}} }
 \end{align*}
 
-
-\newpage
+\vfill

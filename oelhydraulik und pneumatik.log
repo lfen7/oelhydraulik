@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.9)  18 MAR 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.9)  25 APR 2020 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -760,7 +760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--58
 OT1/cmss/m/n/10 und $\OML/cmm/m/it/10 A[]$ \OT1/cmss/m/n/10 und
  []
 
-<./graphics/viskositaet.png, id=365, 219.82124pt x 117.43875pt>
+<./graphics/viskositaet.png, id=377, 219.82124pt x 117.43875pt>
 File: ./graphics/viskositaet.png Graphic file (type png)
 <use ./graphics/viskositaet.png>
 Package pdftex.def Info: ./graphics/viskositaet.png  used on input line 71.
@@ -775,7 +775,7 @@ Overfull \hbox (18.44333pt too wide) in paragraph at lines 80--86
 [][] 
  []
 
-<./graphics/visk_wirkungsgrad.png, id=367, 306.39468pt x 243.15843pt>
+<./graphics/visk_wirkungsgrad.png, id=379, 306.39468pt x 243.15843pt>
 File: ./graphics/visk_wirkungsgrad.png Graphic file (type png)
 <use ./graphics/visk_wirkungsgrad.png>
 Package pdftex.def Info: ./graphics/visk_wirkungsgrad.png  used on input line 8
@@ -790,12 +790,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./graph
 ics/viskositaet.png>]
-<./graphics/visk_temp.png, id=389, 272.51813pt x 274.77657pt>
+<./graphics/visk_temp.png, id=401, 272.51813pt x 274.77657pt>
 File: ./graphics/visk_temp.png Graphic file (type png)
 <use ./graphics/visk_temp.png>
 Package pdftex.def Info: ./graphics/visk_temp.png  used on input line 95.
 (pdftex.def)             Requested size: 238.05467pt x 240.02638pt.
-<./graphics/dichte.png, id=390, 280.04625pt x 214.55156pt>
+<./graphics/dichte.png, id=402, 280.04625pt x 214.55156pt>
 File: ./graphics/dichte.png Graphic file (type png)
 <use ./graphics/dichte.png>
 Package pdftex.def Info: ./graphics/dichte.png  used on input line 102.
@@ -837,7 +837,7 @@ Overfull \hbox (19.30058pt too wide) in paragraph at lines 226--227
 []\OT1/cmss/m/n/10 Druckmessung in Str^^?omungsrich-tung
  []
 
-<./graphics/rechteckspalt.png, id=414, 572.89032pt x 249.93375pt>
+<./graphics/rechteckspalt.png, id=426, 572.89032pt x 249.93375pt>
 File: ./graphics/rechteckspalt.png Graphic file (type png)
 <use ./graphics/rechteckspalt.png>
 Package pdftex.def Info: ./graphics/rechteckspalt.png  used on input line 234.
@@ -852,12 +852,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-<./graphics/kreisspalt.png, id=415, 572.89032pt x 249.93375pt>
+<./graphics/kreisspalt.png, id=427, 572.89032pt x 249.93375pt>
 File: ./graphics/kreisspalt.png Graphic file (type png)
 <use ./graphics/kreisspalt.png>
 Package pdftex.def Info: ./graphics/kreisspalt.png  used on input line 251.
 (pdftex.def)             Requested size: 238.05467pt x 103.85786pt.
-<./graphics/kreisringspalt.png, id=416, 572.89032pt x 258.21469pt>
+<./graphics/kreisringspalt.png, id=428, 572.89032pt x 258.21469pt>
 File: ./graphics/kreisringspalt.png Graphic file (type png)
 <use ./graphics/kreisringspalt.png>
 Package pdftex.def Info: ./graphics/kreisringspalt.png  used on input line 264.
@@ -868,7 +868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-<./graphics/blendensroemung.png, id=417, 481.04718pt x 258.9675pt>
+<./graphics/blendensroemung.png, id=429, 481.04718pt x 258.9675pt>
 File: ./graphics/blendensroemung.png Graphic file (type png)
 <use ./graphics/blendensroemung.png>
 Package pdftex.def Info: ./graphics/blendensroemung.png  used on input line 278
@@ -890,7 +890,7 @@ Overfull \hbox (8.62662pt too wide) in paragraph at lines 288--288
 []\OT1/cmss/bx/n/12 Druckverluste & Rei-bungswider-stand 
  []
 
-<./graphics/Rohrreibungszahl.png, id=425, 376.40625pt x 291.33844pt>
+<./graphics/Rohrreibungszahl.png, id=437, 376.40625pt x 291.33844pt>
 File: ./graphics/Rohrreibungszahl.png Graphic file (type png)
 <use ./graphics/Rohrreibungszahl.png>
 Package pdftex.def Info: ./graphics/Rohrreibungszahl.png  used on input line 32
@@ -943,14 +943,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 \OT1/cmss/m/n/10 Dabei wird die ef-fek-tive Kraft mit dem
  []
 
-<./graphics/vierquadrantenbetrieb.png, id=426, 388.45125pt x 318.43968pt>
+<./graphics/vierquadrantenbetrieb.png, id=438, 388.45125pt x 318.43968pt>
 File: ./graphics/vierquadrantenbetrieb.png Graphic file (type png)
 <use ./graphics/vierquadrantenbetrieb.png>
 Package pdftex.def Info: ./graphics/vierquadrantenbetrieb.png  used on input li
 ne 23.
 (pdftex.def)             Requested size: 238.05467pt x 195.15169pt.
 [5 <./graphics/blendensroemung.png> <./graphics/Rohrreibungszahl.png>]
-<./graphics/verdraengereinheit.png, id=437, 307.90031pt x 321.45094pt>
+<./graphics/verdraengereinheit.png, id=449, 307.90031pt x 321.45094pt>
 File: ./graphics/verdraengereinheit.png Graphic file (type png)
 <use ./graphics/verdraengereinheit.png>
 Package pdftex.def Info: ./graphics/verdraengereinheit.png  used on input line 
@@ -984,163 +984,197 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 [6 <./graphics/vierquadrantenbetrieb.png> <./graphics/verdraengereinheit.png>]
-<./graphics/konstantpumpen.png, id=448, 684.30656pt x 376.40625pt>
+<./graphics/konstantpumpen.png, id=460, 684.30656pt x 376.40625pt>
 File: ./graphics/konstantpumpen.png Graphic file (type png)
 <use ./graphics/konstantpumpen.png>
-Package pdftex.def Info: ./graphics/konstantpumpen.png  used on input line 96.
+Package pdftex.def Info: ./graphics/konstantpumpen.png  used on input line 97.
 (pdftex.def)             Requested size: 238.05467pt x 130.94006pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<./graphics/aussenzahnradpumpe.png, id=449, 907.89188pt x 359.09157pt>
+<./graphics/aussenzahnradpumpe.png, id=461, 907.89188pt x 359.09157pt>
 File: ./graphics/aussenzahnradpumpe.png Graphic file (type png)
 <use ./graphics/aussenzahnradpumpe.png>
 Package pdftex.def Info: ./graphics/aussenzahnradpumpe.png  used on input line 
-100.
+101.
 (pdftex.def)             Requested size: 238.05467pt x 94.1561pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--118
+Underfull \hbox (badness 10000) in paragraph at lines 112--119
 
  []
 
-<./graphics/innenzahnradpumpe.png, id=450, 514.92375pt x 229.60782pt>
+<./graphics/innenzahnradpumpe.png, id=462, 514.92375pt x 229.60782pt>
 File: ./graphics/innenzahnradpumpe.png Graphic file (type png)
 <use ./graphics/innenzahnradpumpe.png>
 Package pdftex.def Info: ./graphics/innenzahnradpumpe.png  used on input line 1
-24.
+25.
 (pdftex.def)             Requested size: 238.05467pt x 106.1499pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--141
+Underfull \hbox (badness 10000) in paragraph at lines 135--142
 
  []
 
 [7 <./graphics/konstantpumpen.png> <./graphics/aussenzahnradpumpe.png> <./graph
 ics/innenzahnradpumpe.png>]
-<./graphics/schraubenspindelpumpe.png, id=465, 584.93532pt x 222.8325pt>
+<./graphics/schraubenspindelpumpe.png, id=477, 584.93532pt x 222.8325pt>
 File: ./graphics/schraubenspindelpumpe.png Graphic file (type png)
 <use ./graphics/schraubenspindelpumpe.png>
 Package pdftex.def Info: ./graphics/schraubenspindelpumpe.png  used on input li
-ne 151.
+ne 152.
 (pdftex.def)             Requested size: 238.05467pt x 90.68867pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 []\OT1/cmss/m/n/10 Sehr geringer Be-trieb-s-druck, kann aber grosse
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 \OT1/cmss/m/n/10 Vol-u-men-str^^?ome beinahe pul-sa-tions-frei f^^?ordern
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 \OT1/cmss/m/n/10 Daf^^?ur entste-hen keine Tur-bu-len-zen und keine
  []
 
-<./graphics/verstellpumpen.png, id=466, 678.28406pt x 201.00093pt>
+<./graphics/verstellpumpen.png, id=478, 678.28406pt x 201.00093pt>
 File: ./graphics/verstellpumpen.png Graphic file (type png)
 <use ./graphics/verstellpumpen.png>
-Package pdftex.def Info: ./graphics/verstellpumpen.png  used on input line 159.
+Package pdftex.def Info: ./graphics/verstellpumpen.png  used on input line 160.
 
 (pdftex.def)             Requested size: 238.05467pt x 70.54459pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-<./graphics/schraegscheibenverstellpumpe.png, id=467, 679.78969pt x 402.75468pt
+<./graphics/schraegscheibenverstellpumpe.png, id=479, 679.78969pt x 402.75468pt
 >
 File: ./graphics/schraegscheibenverstellpumpe.png Graphic file (type png)
 <use ./graphics/schraegscheibenverstellpumpe.png>
 Package pdftex.def Info: ./graphics/schraegscheibenverstellpumpe.png  used on i
-nput line 166.
+nput line 167.
 (pdftex.def)             Requested size: 238.05467pt x 141.04pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
+Underfull \hbox (badness 10000) in paragraph at lines 166--169
 \OT1/cmss/m/n/10 Durch Ver^^?anderung des Nei-gungswinkels der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
+Underfull \hbox (badness 10000) in paragraph at lines 166--169
 \OT1/cmss/m/n/10 Schr^^?agscheibe ergibt sich ein un-ter-schiedlicher
  []
 
-<./graphics/schraegachsenverstellpumpe.png, id=468, 840.13875pt x 496.10344pt>
+<./graphics/schraegachsenverstellpumpe.png, id=480, 840.13875pt x 496.10344pt>
 File: ./graphics/schraegachsenverstellpumpe.png Graphic file (type png)
 <use ./graphics/schraegachsenverstellpumpe.png>
 Package pdftex.def Info: ./graphics/schraegachsenverstellpumpe.png  used on inp
-ut line 181.
+ut line 182.
 (pdftex.def)             Requested size: 238.05467pt x 140.5734pt.
 [8 <./graphics/schraubenspindelpumpe.png> <./graphics/verstellpumpen.png> <./gr
 aphics/schraegscheibenverstellpumpe.png>]
-<./graphics/radialpumpe.png, id=476, 677.53125pt x 389.95688pt>
+<./graphics/radialpumpe.png, id=488, 677.53125pt x 389.95688pt>
 File: ./graphics/radialpumpe.png Graphic file (type png)
 <use ./graphics/radialpumpe.png>
-Package pdftex.def Info: ./graphics/radialpumpe.png  used on input line 186.
+Package pdftex.def Info: ./graphics/radialpumpe.png  used on input line 187.
 (pdftex.def)             Requested size: 238.05467pt x 137.01056pt.
-<./graphics/fluegelzellenpumpe.png, id=477, 786.68906pt x 340.27126pt>
+<./graphics/fluegelzellenpumpe.png, id=489, 786.68906pt x 340.27126pt>
 File: ./graphics/fluegelzellenpumpe.png Graphic file (type png)
 <use ./graphics/fluegelzellenpumpe.png>
 Package pdftex.def Info: ./graphics/fluegelzellenpumpe.png  used on input line 
-201.
+202.
 (pdftex.def)             Requested size: 238.05467pt x 102.96481pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 \OT1/cmss/m/n/10 Sind bei allen Ken-nwerten eher im Mit-telfeld
  []
 
-<./graphics/gerotor.png, id=478, 630.85687pt x 374.14781pt>
+<./graphics/gerotor.png, id=490, 630.85687pt x 374.14781pt>
 File: ./graphics/gerotor.png Graphic file (type png)
 <use ./graphics/gerotor.png>
-Package pdftex.def Info: ./graphics/gerotor.png  used on input line 218.
+Package pdftex.def Info: ./graphics/gerotor.png  used on input line 219.
 (pdftex.def)             Requested size: 238.05467pt x 141.18427pt.
-<./graphics/hydraulikmotoren_tab.png, id=479, 458.1918pt x 317.5062pt>
+<./graphics/hydraulikmotoren_tab.png, id=491, 458.1918pt x 317.5062pt>
 File: ./graphics/hydraulikmotoren_tab.png Graphic file (type png)
 <use ./graphics/hydraulikmotoren_tab.png>
 Package pdftex.def Info: ./graphics/hydraulikmotoren_tab.png  used on input lin
-e 222.
+e 223.
 (pdftex.def)             Requested size: 238.05467pt x 164.95882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<./graphics/pulsation.png, id=480, 810.77907pt x 467.49657pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rightarrow' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 225.
+
+<./graphics/pulsation.png, id=492, 810.77907pt x 467.49657pt>
 File: ./graphics/pulsation.png Graphic file (type png)
 <use ./graphics/pulsation.png>
-Package pdftex.def Info: ./graphics/pulsation.png  used on input line 225.
+Package pdftex.def Info: ./graphics/pulsation.png  used on input line 226.
 (pdftex.def)             Requested size: 238.05467pt x 137.26114pt.
 [9 <./graphics/schraegachsenverstellpumpe.png> <./graphics/radialpumpe.png> <./
-graphics/fluegelzellenpumpe.png> <./graphics/gerotor.png>])
-(./sections/3-hydraulikzylinder.tex
-<./graphics/zyl_gleichgang.png, id=491, 338.76563pt x 88.07906pt>
+graphics/fluegelzellenpumpe.png> <./graphics/gerotor.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 229.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rightarrow' on input line 229.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 229.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+\OT1/cmss/m/n/10 Getriebe aus Ver-stellpumpe und Kon-stant-mo-tor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+) (./sections/3-hydraulikzylinder.tex
+<./graphics/zyl_gleichgang.png, id=504, 338.76563pt x 88.07906pt>
 File: ./graphics/zyl_gleichgang.png Graphic file (type png)
 <use ./graphics/zyl_gleichgang.png>
 Package pdftex.def Info: ./graphics/zyl_gleichgang.png  used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 36.9889pt.
-<./graphics/zyl_differential.png, id=492, 259.7203pt x 78.2925pt>
+<./graphics/zyl_differential.png, id=505, 259.7203pt x 78.2925pt>
 File: ./graphics/zyl_differential.png Graphic file (type png)
 <use ./graphics/zyl_differential.png>
 Package pdftex.def Info: ./graphics/zyl_differential.png  used on input line 12
@@ -1151,12 +1185,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 []\OT1/cmss/m/n/10 Einziger Zylin-der-typ mit un-ter-schiedlicher
  []
 
-<./graphics/zyl_plunger.png, id=493, 230.36063pt x 184.43906pt>
+<./graphics/zyl_plunger.png, id=506, 230.36063pt x 184.43906pt>
 File: ./graphics/zyl_plunger.png Graphic file (type png)
 <use ./graphics/zyl_plunger.png>
 Package pdftex.def Info: ./graphics/zyl_plunger.png  used on input line 19.
 (pdftex.def)             Requested size: 142.26378pt x 113.90355pt.
-<./graphics/zylinderkraefte.png, id=494, 654.94687pt x 289.08pt>
+[10 <./graphics/hydraulikmotoren_tab.png> <./graphics/pulsation.png> <./graphic
+s/zyl_gleichgang.png> <./graphics/zyl_differential.png>]
+<./graphics/zylinderkraefte.png, id=518, 654.94687pt x 289.08pt>
 File: ./graphics/zylinderkraefte.png Graphic file (type png)
 <use ./graphics/zylinderkraefte.png>
 Package pdftex.def Info: ./graphics/zylinderkraefte.png  used on input line 25.
@@ -1172,44 +1208,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
 
-<./graphics/eulerfall.png, id=495, 712.16063pt x 415.5525pt>
-File: ./graphics/eulerfall.png Graphic file (type png)
-<use ./graphics/eulerfall.png>
-Package pdftex.def Info: ./graphics/eulerfall.png  used on input line 40.
-(pdftex.def)             Requested size: 238.05467pt x 138.90182pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[10 <./graphics/hydraulikmotoren_tab.png> <./graphics/pulsation.png> <./graphic
-s/zyl_gleichgang.png> <./graphics/zyl_differential.png> <./graphics/zyl_plunger
-.png> <./graphics/zylinderkraefte.png>]
-<./graphics/korrekturfaktor.png, id=511, 749.80125pt x 401.24907pt>
+<./graphics/eulerfall.png, id=519, 712.16063pt x 415.5525pt>
+File: ./graphics/eulerfall.png Graphic file (type png)
+<use ./graphics/eulerfall.png>
+Package pdftex.def Info: ./graphics/eulerfall.png  used on input line 50.
+(pdftex.def)             Requested size: 238.05467pt x 138.90182pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+<./graphics/korrekturfaktor.png, id=520, 749.80125pt x 401.24907pt>
 File: ./graphics/korrekturfaktor.png Graphic file (type png)
 <use ./graphics/korrekturfaktor.png>
-Package pdftex.def Info: ./graphics/korrekturfaktor.png  used on input line 43.
+Package pdftex.def Info: ./graphics/korrekturfaktor.png  used on input line 53.
 
 (pdftex.def)             Requested size: 238.05467pt x 127.39209pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[11 <./graphics/eulerfall.png> <./graphics/korrekturfaktor.png>])
+[11 <./graphics/zyl_plunger.png> <./graphics/zylinderkraefte.png> <./graphics/e
+ulerfall.png> <./graphics/korrekturfaktor.png>])
 (./sections/4-proportionalventile.tex
-<./graphics/wegeschaltventil1.png, id=525, 1031.35312pt x 537.50812pt>
+<./graphics/wegeschaltventil1.png, id=536, 1031.35312pt x 537.50812pt>
 File: ./graphics/wegeschaltventil1.png Graphic file (type png)
 <use ./graphics/wegeschaltventil1.png>
 Package pdftex.def Info: ./graphics/wegeschaltventil1.png  used on input line 4
 .
 (pdftex.def)             Requested size: 238.05467pt x 124.06715pt.
-<./graphics/wegeschaltventil2.png, id=526, 794.2172pt x 325.96782pt>
+<./graphics/wegeschaltventil2.png, id=537, 794.2172pt x 325.96782pt>
 File: ./graphics/wegeschaltventil2.png Graphic file (type png)
 <use ./graphics/wegeschaltventil2.png>
 Package pdftex.def Info: ./graphics/wegeschaltventil2.png  used on input line 5
@@ -1220,7 +1259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-<./graphics/proportionalwegeventil.png, id=527, 785.93625pt x 349.305pt>
+<./graphics/proportionalwegeventil.png, id=538, 785.93625pt x 349.305pt>
 File: ./graphics/proportionalwegeventil.png Graphic file (type png)
 <use ./graphics/proportionalwegeventil.png>
 Package pdftex.def Info: ./graphics/proportionalwegeventil.png  used on input l
@@ -1241,7 +1280,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 ional zum
  []
 
-<./graphics/proportionalwegeventil2.png, id=528, 520.94624pt x 407.27156pt>
+<./graphics/proportionalwegeventil2.png, id=539, 520.94624pt x 407.27156pt>
 File: ./graphics/proportionalwegeventil2.png Graphic file (type png)
 <use ./graphics/proportionalwegeventil2.png>
 Package pdftex.def Info: ./graphics/proportionalwegeventil2.png  used on input 
@@ -1253,9 +1292,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
  []
 
 [12 <./graphics/wegeschaltventil1.png> <./graphics/wegeschaltventil2.png> <./gr
-aphics/proportionalwegeventil.png> <./graphics/proportionalwegeventil2.png>])
-(./sections/5-hydraulische_widerstandsmessung.tex
-<./graphics/signalumsetzung.png, id=535, 335.75438pt x 249.18094pt>
+aphics/proportionalwegeventil.png> <./graphics/proportionalwegeventil2.png>]
+[13]) (./sections/5-hydraulische_widerstandsmessung.tex
+<./graphics/signalumsetzung.png, id=553, 335.75438pt x 249.18094pt>
 File: ./graphics/signalumsetzung.png Graphic file (type png)
 <use ./graphics/signalumsetzung.png>
 Package pdftex.def Info: ./graphics/signalumsetzung.png  used on input line 2.
@@ -1275,7 +1314,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
-<./graphics/einkantensteuerung.png, id=536, 670.75594pt x 465.23813pt>
+<./graphics/einkantensteuerung.png, id=554, 670.75594pt x 465.23813pt>
 File: ./graphics/einkantensteuerung.png Graphic file (type png)
 <use ./graphics/einkantensteuerung.png>
 Package pdftex.def Info: ./graphics/einkantensteuerung.png  used on input line 
@@ -1296,7 +1335,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--87
 
  []
 
-<./graphics/zweikantensteuerung.png, id=537, 670.75594pt x 465.23813pt>
+<./graphics/zweikantensteuerung.png, id=555, 670.75594pt x 465.23813pt>
 File: ./graphics/zweikantensteuerung.png Graphic file (type png)
 <use ./graphics/zweikantensteuerung.png>
 Package pdftex.def Info: ./graphics/zweikantensteuerung.png  used on input line
@@ -1307,8 +1346,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[13 <./graphics/signalumsetzung.png> <./graphics/einkantensteuerung.png>]
-<./graphics/vierkantensteuerung.png, id=548, 757.32938pt x 488.57532pt>
+[14 <./graphics/signalumsetzung.png> <./graphics/einkantensteuerung.png>]
+<./graphics/vierkantensteuerung.png, id=565, 757.32938pt x 488.57532pt>
 File: ./graphics/vierkantensteuerung.png Graphic file (type png)
 <use ./graphics/vierkantensteuerung.png>
 Package pdftex.def Info: ./graphics/vierkantensteuerung.png  used on input line
@@ -1320,7 +1359,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--142
  []
 
 ) (./sections/6-servozylinder_antrieb.tex
-<./graphics/kennlinienfeld.png, id=549, 478.78876pt x 420.06938pt>
+<./graphics/kennlinienfeld.png, id=566, 478.78876pt x 420.06938pt>
 File: ./graphics/kennlinienfeld.png Graphic file (type png)
 <use ./graphics/kennlinienfeld.png>
 Package pdftex.def Info: ./graphics/kennlinienfeld.png  used on input line 10.
@@ -1330,9 +1369,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-[14 <./graphics/zweikantensteuerung.png> <./graphics/vierkantensteuerung.png> <
+[15 <./graphics/zweikantensteuerung.png> <./graphics/vierkantensteuerung.png> <
 ./graphics/kennlinienfeld.png>]
-<./graphics/differentialgleichungssystem.png, id=560, 420.06938pt x 266.49562pt
+<./graphics/differentialgleichungssystem.png, id=577, 420.06938pt x 266.49562pt
 >
 File: ./graphics/differentialgleichungssystem.png Graphic file (type png)
 <use ./graphics/differentialgleichungssystem.png>
@@ -1344,7 +1383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<./graphics/steuerkette.png, id=561, 755.07094pt x 333.49594pt>
+<./graphics/steuerkette.png, id=578, 755.07094pt x 333.49594pt>
 File: ./graphics/steuerkette.png Graphic file (type png)
 <use ./graphics/steuerkette.png>
 Package pdftex.def Info: ./graphics/steuerkette.png  used on input line 38.
@@ -1369,7 +1408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 []\OT1/cmss/m/n/10 Gummiblase im Spe-icher enth^^?alt das
  []
 
-[15 <./graphics/differentialgleichungssystem.png> <./graphics/steuerkette.png>]
+[16 <./graphics/differentialgleichungssystem.png> <./graphics/steuerkette.png>]
 
 Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
@@ -1390,13 +1429,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
  []
 
-[16]
-<./graphics/taupunktkurve.png, id=575, 301.125pt x 268.00125pt>
+[17]
+<./graphics/taupunktkurve.png, id=592, 301.125pt x 268.00125pt>
 File: ./graphics/taupunktkurve.png Graphic file (type png)
 <use ./graphics/taupunktkurve.png>
 Package pdftex.def Info: ./graphics/taupunktkurve.png  used on input line 76.
 (pdftex.def)             Requested size: 238.05467pt x 211.87814pt.
-<./graphics/Pneumatischermuskel.png, id=576, 322.20375pt x 297.36093pt>
+<./graphics/Pneumatischermuskel.png, id=593, 322.20375pt x 297.36093pt>
 File: ./graphics/Pneumatischermuskel.png Graphic file (type png)
 <use ./graphics/Pneumatischermuskel.png>
 Package pdftex.def Info: ./graphics/Pneumatischermuskel.png  used on input line
@@ -1407,7 +1446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
-<./graphics/Pneumatischermuskel_Kennlinienfeld.png, id=577, 581.92406pt x 473.5
+<./graphics/Pneumatischermuskel_Kennlinienfeld.png, id=594, 581.92406pt x 473.5
 1906pt>
 File: ./graphics/Pneumatischermuskel_Kennlinienfeld.png Graphic file (type png)
 
@@ -1425,7 +1464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 []\OT1/cmss/m/n/10 weitgehend lin-eare Kennlinie durch geringe
  []
 
-<./graphics/Vakumduese_mit_Saugnapf.png, id=578, 472.76625pt x 188.95593pt>
+<./graphics/Vakumduese_mit_Saugnapf.png, id=595, 472.76625pt x 188.95593pt>
 File: ./graphics/Vakumduese_mit_Saugnapf.png Graphic file (type png)
 <use ./graphics/Vakumduese_mit_Saugnapf.png>
 Package pdftex.def Info: ./graphics/Vakumduese_mit_Saugnapf.png  used on input 
@@ -1436,13 +1475,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
-[17 <./graphics/taupunktkurve.png> <./graphics/Pneumatischermuskel.png>]
+[18 <./graphics/taupunktkurve.png> <./graphics/Pneumatischermuskel.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 119--120
 []\OT1/cmss/m/n/10 Tank entleert sich ^^?uber Saug-napf bei
  []
 
 ) (./sections/9-schaltsymbole.tex
-<./graphics/Schaltsymbole_Hydraulik_1_Grundelemente.png, id=588, 451.6875pt x 2
+<./graphics/Schaltsymbole_Hydraulik_1_Grundelemente.png, id=605, 451.6875pt x 2
 75.52937pt>
 File: ./graphics/Schaltsymbole_Hydraulik_1_Grundelemente.png Graphic file (type
  png)
@@ -1455,7 +1494,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<./graphics/Schaltsymbole_Hydraulik_2_Pumpen_und_Motoren.png, id=589, 654.19406
+<./graphics/Schaltsymbole_Hydraulik_2_Pumpen_und_Motoren.png, id=606, 654.19406
 pt x 365.86688pt>
 File: ./graphics/Schaltsymbole_Hydraulik_2_Pumpen_und_Motoren.png Graphic file 
 (type png)
@@ -1468,7 +1507,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<./graphics/Schaltsymbole_Hydraulik_3.png, id=590, 722.7pt x 410.2828pt>
+<./graphics/Schaltsymbole_Hydraulik_3.png, id=607, 722.7pt x 410.2828pt>
 File: ./graphics/Schaltsymbole_Hydraulik_3.png Graphic file (type png)
 <use ./graphics/Schaltsymbole_Hydraulik_3.png>
 Package pdftex.def Info: ./graphics/Schaltsymbole_Hydraulik_3.png  used on inpu
@@ -1479,7 +1518,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-<./graphics/Schaltsymbole_Hydraulik_5_Sperr_und_Stromventile.png, id=591, 472.0
+<./graphics/Schaltsymbole_Hydraulik_5_Sperr_und_Stromventile.png, id=608, 472.0
 1344pt x 284.56313pt>
 File: ./graphics/Schaltsymbole_Hydraulik_5_Sperr_und_Stromventile.png Graphic f
 ile (type png)
@@ -1492,7 +1531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-<./graphics/Schaltsymbole_Hydraulik_4_Druckventile.png, id=592, 484.81125pt x 2
+<./graphics/Schaltsymbole_Hydraulik_4_Druckventile.png, id=609, 484.81125pt x 2
 75.52937pt>
 File: ./graphics/Schaltsymbole_Hydraulik_4_Druckventile.png Graphic file (type 
 png)
@@ -1505,7 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-[18 <./graphics/Pneumatischermuskel_Kennlinienfeld.png> <./graphics/Vakumduese_
+[19 <./graphics/Pneumatischermuskel_Kennlinienfeld.png> <./graphics/Vakumduese_
 mit_Saugnapf.png> <./graphics/Schaltsymbole_Hydraulik_1_Grundelemente.png> <./g
 raphics/Schaltsymbole_Hydraulik_2_Pumpen_und_Motoren.png> <./graphics/Schaltsym
 bole_Hydraulik_3.png> <./graphics/Schaltsymbole_Hydraulik_5_Sperr_und_Stromvent
@@ -1519,7 +1558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 []\OT1/cmss/m/n/10 Elektrisch pro-por-tional anges-teuertes DBV:
  []
 
-<./graphics/Schaltsymbole_Hydraulik_6_Wegeventile.png, id=602, 716.6775pt x 344
+<./graphics/Schaltsymbole_Hydraulik_6_Wegeventile.png, id=620, 716.6775pt x 344
 .78813pt>
 File: ./graphics/Schaltsymbole_Hydraulik_6_Wegeventile.png Graphic file (type p
 ng)
@@ -1532,19 +1571,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 []\OT1/cmss/m/n/10 Angabe ob Pro-por-tion-al-ven-til (erkennbar an
  []
 
-<./graphics/Schaltsymbole_Pneumatik_1.png, id=603, 485.56406pt x 263.48438pt>
+<./graphics/Schaltsymbole_Pneumatik_1.png, id=621, 485.56406pt x 263.48438pt>
 File: ./graphics/Schaltsymbole_Pneumatik_1.png Graphic file (type png)
 <use ./graphics/Schaltsymbole_Pneumatik_1.png>
 Package pdftex.def Info: ./graphics/Schaltsymbole_Pneumatik_1.png  used on inpu
 t line 33.
 (pdftex.def)             Requested size: 238.05467pt x 129.1768pt.
-<./graphics/Schaltsymbole_Pneumatik_2.png, id=604, 487.06969pt x 313.9228pt>
+<./graphics/Schaltsymbole_Pneumatik_2.png, id=622, 487.06969pt x 313.9228pt>
 File: ./graphics/Schaltsymbole_Pneumatik_2.png Graphic file (type png)
 <use ./graphics/Schaltsymbole_Pneumatik_2.png>
 Package pdftex.def Info: ./graphics/Schaltsymbole_Pneumatik_2.png  used on inpu
 t line 34.
 (pdftex.def)             Requested size: 238.05467pt x 153.43073pt.
-<./graphics/Schaltsymbole_Pneumatik_3.png, id=605, 532.23843pt x 306.39468pt>
+<./graphics/Schaltsymbole_Pneumatik_3.png, id=623, 532.23843pt x 306.39468pt>
 File: ./graphics/Schaltsymbole_Pneumatik_3.png Graphic file (type png)
 <use ./graphics/Schaltsymbole_Pneumatik_3.png>
 Package pdftex.def Info: ./graphics/Schaltsymbole_Pneumatik_3.png  used on inpu
@@ -1555,7 +1594,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-<./graphics/Schaltsymbole_Ventilbetaetigung.png, id=606, 423.83344pt x 288.3272
+<./graphics/Schaltsymbole_Ventilbetaetigung.png, id=624, 423.83344pt x 288.3272
 pt>
 File: ./graphics/Schaltsymbole_Ventilbetaetigung.png Graphic file (type png)
 <use ./graphics/Schaltsymbole_Ventilbetaetigung.png>
@@ -1567,10 +1606,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-) [19 <./graphics/Schaltsymbole_Hydraulik_4_Druckventile.png> <./graphics/Schal
+) [20 <./graphics/Schaltsymbole_Hydraulik_4_Druckventile.png> <./graphics/Schal
 tsymbole_Hydraulik_6_Wegeventile.png> <./graphics/Schaltsymbole_Pneumatik_1.png
 > <./graphics/Schaltsymbole_Pneumatik_2.png> <./graphics/Schaltsymbole_Pneumati
-k_3.png>] [20 <./graphics/Schaltsymbole_Ventilbetaetigung.png>]
+k_3.png>] [21 <./graphics/Schaltsymbole_Ventilbetaetigung.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
 
@@ -1579,17 +1618,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `"oelhydraulik und pneumatik".out' has not ch
 anged.
-(rerunfilecheck)             Checksum: 2EAE19CD52D097E2614941B2C7FE7EB2;6516.
+(rerunfilecheck)             Checksum: 832A23756746D951FACA4FEBD0301A0B;6755.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 20058 strings out of 492616
- 347620 string characters out of 6129482
+ 20090 strings out of 492616
+ 347993 string characters out of 6129482
  714195 words of memory out of 5000000
- 23554 multiletter control sequences out of 15000+600000
- 538004 words of font info for 45 fonts, out of 8000000 for 9000
+ 23574 multiletter control sequences out of 15000+600000
+ 542351 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,14n,65p,765b,676s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,15n,65p,765b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1599,14 +1638,15 @@ sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
 ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "oelhydraulik und pneumatik.pdf" (20 pages, 9713634 bytes).
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "oelhydraulik und pneumatik.pdf" (21 pages, 9725247 bytes).
 PDF statistics:
- 703 PDF objects out of 1000 (max. 8388607)
- 571 compressed objects within 6 object streams
- 176 named destinations out of 1000 (max. 500000)
- 991 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 723 PDF objects out of 1000 (max. 8388607)
+ 589 compressed objects within 6 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 1015 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -68,6 +68,7 @@ Dabei ist der Leckage Volumentstrom $Q_L$ in $\eta_{vol}$ enthalten und das Verl
 
 
 \subsection{Motoren-Gleichungen}
+\textbf{ACHTUNG: nicht für Pumpen verwenden!}
 \myeqstar{
 \eta_{vol} &= \frac{n \cdot V_M}{Q_M} \tag{Volumetrisch} \\
 \eta_{hm} &= \frac{M}{p_0} \cdot \frac{2 \pi}{V_M} \tag{Hydraulisch-Mechanisch}
@@ -221,9 +222,38 @@ Gerotor-Motoren sind robust, laufen langsam und bieten ein hohes Drehmoment.
 \subsection{Motoren}
 \graphiccol{hydraulikmotoren_tab}
 
-\subsection{Pulsation}
+\subsection{Pulsation $\rightarrow$ 04.02, S. 32}
 \graphiccol{pulsation}
 Jede Verdrängerbauart besteht aus einer finiten Anzahl Förderelemente, welche zu Ungleichmässigkeiten im Volumenstrom führen. Eine einfache Anschauung zeigt, dass bei ungerader Zähnezahl die Pulsationen erheblich geringer sind. Dazu betrachtet man die Volumenstromkurve eines Förderlemenets, welche durch einen Sinus dargestellt werden kann. Im resultierenden Zeigerdiagram sieht man, dass eine ungerade Anzahl zu geringeren Unterschieden führt. 
 
+\subsection{Steuerung $\rightarrow$ 04.03.}
+Steuerung erfolgt über Druck oder Volumenstrom. \\
+Siehe Skript für Beispiele zu der Steuerung. 
+
+\subsection{Hydrostatisches Getriebe HSG}
+Getriebe aus Verstellpumpe und Konstantmotor, geschlossener Kreislauf. Wir die Pumpe auf null geschwenkt, ist ein kraftloses Halten der Last möglich.\\
+
+\myeqstar{ 
+\frac{M_A}{M_L} &= \frac{1}{\eta_{\text{hmP}} \cdot \eta_{\text{hmM}}} \cdot \frac{V_P}{V_M} \\
+M_A &= \frac{p_A - p_B}{\eta_{ \text{hmP} } } \cdot \frac{V_P}{2 \pi} \\
+M_L &= \eta_{\text{hmM} } \cdot \left( p_A - p_B \right) \cdot \frac{V_M}{2 \pi}
+}
+
+\begin{tabular}{ll}
+$M_L$ & Lastmoment \\
+$M_A$ & Antriebsmoment \\
+$p_A$ und $p_B$ & Druck ????????????? \\
+$\eta_{ \text{hmP} }$ & Wirkungsgrad Pumpe \\
+$\eta_{ \text{hmM} }$ & Wirkungsgrad Motor \\
+$ V_M $ & Schluckvolumen Motor \\
+$ V_P $ & Fördervolumen Pumpe \\
+$Q_PH $ & Fördervolumenstrom
+\end{tabular}
+
+\myeqstar{
+n_A &= \frac{1}{\eta_{\text{volP}} } \cdot \frac{Q_{PH}}{V_P} \\
+\frac{n_L}{N_A} &= \eta_{\text{volP} } \cdot \eta_{\text{volM} } \cdot \frac{V_P}{V_M} \\
+n_L &= \eta_{\text{volM} } \cdot \frac{Q_MH}{V_M}
+}
 
 \vfill
